@@ -1,6 +1,6 @@
 // PHP Data Objects(PDO) Sample Code:
 try {
-    $conn = new PDO("sqlsrv:server = tcp:sqlp.database.windows.net,1433; Database = sql", "sqlp", "{your_password_here}");
+    $conn = new PDO("sqlsrv:server = tcp:sqlp.database.windows.net,1433; Database = sql", "sqlp", "{200487pp}");
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $sql = "CREATE TABLE registration_tbl(
     id INT NOT NULL IDENTITY(1,1) 
