@@ -1,8 +1,9 @@
-// PHP Data Objects(PDO) Sample Code:
+<?php
 try {
-    $conn = new PDO("sqlsrv:server = tcp:sqlp.database.windows.net,1433; Database = sql", "sqlp", "{200487pp}");
+   $conn = new PDO("sqlsrv:server = tcp:sqlp.database.windows.net,1433; Database = sql", "sqlp", "{200487pp}");
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $sql = "CREATE TABLE registration_tbl(
+    
+   $sql = "CREATE TABLE registration_tbl(
     id INT NOT NULL IDENTITY(1,1) 
     PRIMARY KEY(id),
     name VARCHAR(30),
@@ -14,8 +15,5 @@ catch (PDOException $e) {
     print("Error connecting to SQL Server.");
     die(print_r($e));
 }
-
-// SQL Server Extension Sample Code:
-$connectionInfo = array("UID" => "sqlp@sqlp", "pwd" => "{your_password_here}", "Database" => "sql", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
-$serverName = "tcp:sqlp.database.windows.net,1433";
-$conn = sqlsrv_connect($serverName, $connectionInfo);
+echo"123";
+?>
