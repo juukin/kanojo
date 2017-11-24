@@ -51,7 +51,6 @@ try {
 $name = $_POST['name'];
 $email = $_POST['email'];
 $date = date("Y-m-d");
-// Insert data
 $sql_insert =
 "INSERT INTO registration_tbl (name, email, date)
 VALUES (?,?,?)";
