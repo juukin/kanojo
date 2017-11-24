@@ -1,6 +1,6 @@
 <?php
 try {
-    $conn = new PDO("sqlsrv:server = tcp:sqlp.database.windows.net,1433; Database = sql", "sqlp", "00000");
+    $conn = new PDO("sqlsrv:server = tcp:sqlp.database.windows.net,1433; Database = Caramba878", "Caramba878", "535412danNN");
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
    $sql = "CREATE TABLE registration_tbl(
     id INT NOT NULL IDENTITY(1,1) 
