@@ -1,7 +1,7 @@
 <?php
 echo "123456";
 try {
-    $conn = new PDO("sqlsrv:server = tcp:sqlp.database.windows.net,1433; Database = sql","sqlp","qwe200487pP");
+    $conn = new PDO("sqlsrv:server = tcp:sqlp.database.windows.net,1433; Database = sql","sqlp","asd200487pP");
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
    
     $sql = "CREATE TABLE registration_tbl(
