@@ -57,15 +57,12 @@ $vopros = $_POST['vopros'];
 $otvet = $_POST['otvet']; 
 
 $sql_insert = 
-"INSERT INTO registration_tbl1 (name, email, date, password, vopros, otvet) 
-VALUES (?,?,?,?,?,?)"; 
+"INSERT INTO registration_tbl1 (name, email, date) 
+VALUES (?,?,?)"; 
 $stmt = $conn->prepare($sql_insert); 
 $stmt->bindValue(1, $name); 
 $stmt->bindValue(2, $email); 
 $stmt->bindValue(3, $date); 
-$stmt->bindValue(4, $password); 
-$stmt->bindValue(5, $vopros); 
-$stmt->bindValue(6, $otvet); 
 $stmt->execute(); 
 } 
 catch(Exception $e) { 
@@ -88,9 +85,6 @@ echo "<th>Date</th></tr>";
 foreach($registrants as $registrant) { 
 echo "<tr><td>".$registrant['name']."</td>"; 
 echo "<td>".$registrant['email']."</td>"; 
-echo "<td>".$registrant['password']."</td>"; 
-echo "<td>".$registrant['vopros']."</td>"; 
-echo "<td>".$registrant['otvet']."</td>"; 
 echo "<td>".$registrant['date']."</td></tr>"; 
 } 
 echo "</table>"; 
