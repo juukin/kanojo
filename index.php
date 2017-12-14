@@ -39,7 +39,8 @@ name="otvet" id="otvet"/></br>
 <input type="submit" 
 name="submit" value="Зарегестироваться" /> 
 <?php 
-try { $conn = new PDO("sqlsrv:server = tcp:juuksqlserver.database.windows.net,1433; Database = juuksqlbase", "juuksqlserver", "200487pP"); 
+try 
+{ $conn = new PDO("sqlsrv:server = tcp:juuksqlserver.database.windows.net,1433; Database = juuksqlbase", "juuksqlserver", "200487pP"); 
 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
 } 
 catch (PDOException $e) { 
@@ -54,7 +55,7 @@ $date = date("Y-m-d");
 $password = $_POST['password']; 
 $vopros = $_POST['vopros']; 
 $otvet = $_POST['otvet']; 
-// Insert data 
+
 $sql_insert = 
 "INSERT INTO registration_tbl1 (name, email, date, password, vopros, otvet) 
 VALUES (?,?,?,?,?,?)"; 
