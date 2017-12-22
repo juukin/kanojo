@@ -77,9 +77,7 @@ echo "<h2>People who are registered:</h2>";
 echo "<table>"; 
 echo "<tr><th>Name</th>"; 
 echo "<th>Email</th>"; 
-echo "<th>Password</th>"; 
-echo "<th>vopros</th>"; 
-echo "<th>otvet</th>"; 
+echo "<th>Password</th>";
 echo "<th>Date</th></tr>"; 
 foreach($registrants as $registrant) { 
 echo "<tr><td>".$registrant['name']."</td>"; 
