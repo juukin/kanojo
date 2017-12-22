@@ -33,17 +33,7 @@ name="email" id="email"/></br>
 Пароль <input type="text" 
 name="password" id="password"/></br> 
 <?php
-switch ($i) {
-    case "яблоко":
-        echo "i это яблоко";
-        break;
-    case "шоколадка":
-        echo "i это шоколадка";
-        break;
-    case "пирог":
-        echo "i это пирог";
-        break;
-}
+
 ?>
 <input type="submit" 
 name="submit" value="Зарегестироваться" /> 
@@ -59,9 +49,10 @@ die(print_r($e));
 if(!empty($_POST)) { 
 try { 
 $name = $_POST['name']; 
-$email = $_POST['email']; 
+$email = $_POST['email'];
+$password = $_POST['password'];
 $date = date("Y-m-d"); 
-$password = $_POST['password']; 
+ 
 
 
 $sql_insert = 
