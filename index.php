@@ -31,8 +31,7 @@ name="name" id="name"/></br>
 Email <input type="text" 
 name="email" id="email"/></br> 
 Пароль <input type="text" 
-name="password" id="password"/></br> 
-?>
+name="password" id="password"/></br>
 <input type="submit" 
 name="submit" value="Зарегестироваться" /> 
 <?php 
