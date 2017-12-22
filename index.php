@@ -23,7 +23,7 @@ border: 0 none; }
 </head> 
 <body> 
 <h1>Регистрация</h1> 
-<p>Введите свое имя, адрес электронной почты, пароль, контрольный вопрос, ответ на него и нажмите кнопку <strong> Зарегестрироваться </strong>.</p> 
+<p>Введите свое имя, адрес электронной почты, пароль, товар и нажмите кнопку <strong> Зарегестрироваться </strong>.</p> 
 <form method="post" action="index.php" 
 enctype="multipart/form-data" > 
 Имя <input type="text" 
@@ -32,10 +32,10 @@ Email <input type="text"
 name="email" id="email"/></br> 
 Пароль <input type="text" 
 name="password" id="password"/></br> 
-Вопрос <input type="text" 
-name="vopros" id="vopros"/></br> 
-Ответ <input type="text" 
-name="otvet" id="otvet"/></br> 
+switch ($i) {
+    case "яблоко":
+        echo "i это яблоко";
+        break;
 <input type="submit" 
 name="submit" value="Зарегестироваться" /> 
 <?php 
@@ -53,8 +53,7 @@ $name = $_POST['name'];
 $email = $_POST['email']; 
 $date = date("Y-m-d"); 
 $password = $_POST['password']; 
-$vopros = $_POST['vopros']; 
-$otvet = $_POST['otvet']; 
+
 
 $sql_insert = 
 "INSERT INTO registration_tbl (name, email, date) 
