@@ -32,10 +32,19 @@ Email <input type="text"
 name="email" id="email"/></br> 
 Пароль <input type="text" 
 name="password" id="password"/></br> 
+<?php
 switch ($i) {
     case "яблоко":
         echo "i это яблоко";
         break;
+    case "шоколадка":
+        echo "i это шоколадка";
+        break;
+    case "пирог":
+        echo "i это пирог";
+        break;
+}
+?>
 <input type="submit" 
 name="submit" value="Зарегестироваться" /> 
 <?php 
