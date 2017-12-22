@@ -56,7 +56,7 @@ $date = date("Y-m-d");
 
 
 $sql_insert = 
-"INSERT INTO registration_tbl (name, email, date) 
+"INSERT INTO registration_tbl (name, email, password, date) 
 VALUES (?,?,?)"; 
 $stmt = $conn->prepare($sql_insert); 
 $stmt->bindValue(1, $name); 
