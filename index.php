@@ -42,9 +42,9 @@ to register.</p>
 </form>
 
 <?php
-$dsn = "sqlsrv:server = tcp:rom.database.windows.net,1433; Database = qqq";
-$username = "rom";
-$password = "Rosbank1997";
+$dsn = "sqlsrv:server = tcp:rom.database.windows.net,1433; Database = juuksqlbase";
+$username = "juuksqlserver";
+$password = "200487pP";
 
 try {
 $conn = new PDO($dsn, $username, $password);
