@@ -29,8 +29,7 @@ enctype="multipart/form-data" >
 Имя <input type="text" 
 name="name" id="name"/></br> 
 Email <input type="text" 
-name="email" id="email"/></br> 
-Пароль <input type="text"  
+name="email" id="email"/></br>   
 
 name="submit" value="Зарегестироваться" /> 
 <?php 
