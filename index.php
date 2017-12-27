@@ -32,6 +32,16 @@ Email <input type="text"
 name="email" id="email"/></br> 
 Пароль <input type="text" 
 name="password" id="password"/></br>
+<select name="tovar">
+<option value="">All</option>
+<option value="ball">ball</option>
+<option value="usi">usi</option>
+<option value="Germany">Germany</option>
+<option value="Japan">Japan</option>
+<option value="China">China</option>
+    </select>
+<input type ="submit" name ="submit" value ="Отправить">
+<input type="submit" name="filter" value="Фильтр">
 <input type="submit" 
 name="submit" value="Зарегестироваться" /> 
 <?php 
@@ -48,7 +58,8 @@ try {
 $name = $_POST['name']; 
 $email = $_POST['email'];
 $password = $_POST['password'];
-$date = date("Y-m-d"); 
+$date = date("Y-m-d");
+$tovar = $_POST['tovar'];
  
 
 
