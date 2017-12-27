@@ -27,7 +27,9 @@ border: 0 none; }
 <form method="post" action="index.php" 
 enctype="multipart/form-data" > 
 Имя <input type="text" 
-name="name" id="name"/></br> 
+name="name" id="name"/></br>
+Пароль <input type="text" 
+name="password" id="password"/></br>
 Email <input type="text" 
 name="email" id="email"/></br>   
 
@@ -43,7 +45,8 @@ die(print_r($e));
 } 
 if(!empty($_POST)) { 
 try { 
-$name = $_POST['name']; 
+$name = $_POST['name'];
+$password = $_POST['password'];
 $email = $_POST['email']; 
 $date = date("Y-m-d"); 
 
@@ -52,8 +55,9 @@ $sql_insert =
 VALUES (?,?,?)"; 
 $stmt = $conn->prepare($sql_insert); 
 $stmt->bindValue(1, $name); 
-$stmt->bindValue(2, $email); 
-$stmt->bindValue(3, $date); 
+$stmt->bindValue(3, $email);
+$stmt->bindValue(4, $password);
+$stmt->bindValue(4, $date); 
 $stmt->execute(); 
 } 
 catch(Exception $e) { 
@@ -67,11 +71,13 @@ $registrants = $stmt->fetchAll();
 if(count($registrants) > 0) { 
 echo "<h2>People who are registered:</h2>"; 
 echo "<table>"; 
-echo "<tr><th>Name</th>"; 
+echo "<tr><th>Name</th>";
+cho "<th>Password</th>"
 echo "<th>Email</th>"; 
 echo "<th>Date</th></tr>"; 
 foreach($registrants as $registrant) { 
-echo "<tr><td>".$registrant['name']."</td>"; 
+echo "<tr><td>".$registrant['name']."</td>";
+echo "<tr><td>".$registrant['password']."</td>";
 echo "<td>".$registrant['email']."</td>"; 
 echo "<td>".$registrant['date']."</td></tr>"; 
 } 
