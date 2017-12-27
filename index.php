@@ -42,7 +42,7 @@ to register.</p>
 </form>
 
 <?php
-$dsn = "sqlsrv:server = tcp:rom.database.windows.net,1433; Database = juuksqlbase";
+$dsn = "sqlsrv:server = tcp:juuksqlserver.database.windows.net,1433; Database = juuksqlbase";
 $username = "juuksqlserver";
 $password = "200487pP";
 
