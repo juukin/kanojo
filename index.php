@@ -23,16 +23,20 @@ border: 0 none; }
 </head> 
 <body> 
 <h1>Регистрация</h1> 
-<p>Введите свое имя, адрес электронной почты и нажмите кнопку <strong> Зарегестрироваться </strong>.</p> 
+<p>Введите свое имя, адрес электронной почты, пароль, контрольный вопрос, ответ на него и нажмите кнопку <strong> Зарегестрироваться </strong>.</p> 
 <form method="post" action="index.php" 
 enctype="multipart/form-data" > 
 Имя <input type="text" 
-name="name" id="name"/></br>
-Пароль <input type="text" 
-name="password" id="password"/></br>
+name="name" id="name"/></br> 
 Email <input type="text" 
-name="email" id="email"/></br>   
-
+name="email" id="email"/></br> 
+Пароль <input type="text" 
+name="password" id="password"/></br> 
+Вопрос <input type="text" 
+name="vopros" id="vopros"/></br> 
+Ответ <input type="text" 
+name="otvet" id="otvet"/></br> 
+<input type="submit" 
 name="submit" value="Зарегестироваться" /> 
 <?php 
 try { 
@@ -45,19 +49,19 @@ die(print_r($e));
 } 
 if(!empty($_POST)) { 
 try { 
-$name = $_POST['name'];
-$password = $_POST['password'];
+$name = $_POST['name']; 
 $email = $_POST['email']; 
 $date = date("Y-m-d"); 
-
+$password = $_POST['password']; 
+$vopros = $_POST['vopros']; 
+$otvet = $_POST['otvet']; 
 $sql_insert = 
 "INSERT INTO registration_tbl (name, email, date) 
 VALUES (?,?,?)"; 
 $stmt = $conn->prepare($sql_insert); 
 $stmt->bindValue(1, $name); 
-$stmt->bindValue(3, $email);
-$stmt->bindValue(4, $password);
-$stmt->bindValue(4, $date); 
+$stmt->bindValue(2, $email); 
+$stmt->bindValue(3, $date); 
 $stmt->execute(); 
 } 
 catch(Exception $e) { 
@@ -71,13 +75,14 @@ $registrants = $stmt->fetchAll();
 if(count($registrants) > 0) { 
 echo "<h2>People who are registered:</h2>"; 
 echo "<table>"; 
-echo "<tr><th>Name</th>";
-cho "<th>Password</th>"
+echo "<tr><th>Name</th>"; 
 echo "<th>Email</th>"; 
+echo "<th>Password</th>"; 
+echo "<th>vopros</th>"; 
+echo "<th>otvet</th>"; 
 echo "<th>Date</th></tr>"; 
 foreach($registrants as $registrant) { 
-echo "<tr><td>".$registrant['name']."</td>";
-echo "<tr><td>".$registrant['password']."</td>";
+echo "<tr><td>".$registrant['name']."</td>"; 
 echo "<td>".$registrant['email']."</td>"; 
 echo "<td>".$registrant['date']."</td></tr>"; 
 } 
