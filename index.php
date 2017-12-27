@@ -41,8 +41,8 @@ to register.</p>
 <input type="submit" name="filter" value="Фильтр">
 </form>
 try {
-    $conn = new PDO("sqlsrv:server = tcp:juuksqlserver.database.windows.net,1433; Database = juuksqlbase", "juuksqlserver", "{200487pP}");
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION)
+$conn = new PDO("sqlsrv:server = tcp:juuksqlserver.database.windows.net,1433; Database = juuksqlbase", "juuksqlserver", "{200487pP}");
+$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION)
 }
 catch (PDOException $e) {
 print("Ошибка подключения к SQL Server.");
