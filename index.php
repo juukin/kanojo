@@ -23,15 +23,13 @@ border: 0 none; }
 </head> 
 <body> 
 <h1>Регистрация</h1> 
-<p>Введите свое имя, адрес электронной почты, пароль, товар и нажмите кнопку <strong> Зарегестрироваться </strong>.</p> 
+<p>Введите свое имя, адрес электронной почты, товар и нажмите кнопку <strong> Зарегестрироваться </strong>.</p> 
 <form method="post" action="index.php" 
 enctype="multipart/form-data" > 
 Имя <input type="text" 
 name="name" id="name"/></br> 
 Email <input type="text" 
 name="email" id="email"/></br> 
-Пароль <input type="text" 
-name="password" id="password"/></br>
 <select name="tovar">
 <option value="">All</option>
 <option value="ball">ball</option>
@@ -57,7 +55,6 @@ if(!empty($_POST)) {
 try { 
 $name = $_POST['name']; 
 $email = $_POST['email'];
-$password = $_POST['password'];
 $date = date("Y-m-d");
 $tovar = $_POST['tovar'];
  
