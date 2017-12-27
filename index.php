@@ -29,7 +29,6 @@ to register.</p>
 <form method="post" action="index.php" enctype="multipart/form-data" >
 <input type ="text" name ="name" id ="name" placeholder ="Введите ваше имя">
 <input type ="text" name ="email" id ="email" placeholder ="Ваш еmail..">
-// Записываем данные в поля в email, name.
 <select name="country">
 <option value="">All</option>
 <option value="Russia">Russia</option>
@@ -37,11 +36,9 @@ to register.</p>
 <option value="Germany">Germany</option>
 <option value="Japan">Japan</option>
 <option value="China">China</option>
-// Выбираем страну проживания
 </select>
 <input type ="submit" name ="submit" value ="Отправить">
-<input type="submit" name="filter" value="Фильтр">
-// Кнопки для регистрации и для фильтрации
+<input type="submit" name="filter" value="Фильтр">и
 </form>
 
 try { 
@@ -52,22 +49,18 @@ try {
 $conn = new PDO($dsn, $username, $password);
 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 }
-// Для подключения к свое БД, используем строки подключения azure
 catch (PDOException $e) {
 print("Ошибка подключения к SQL Server.");
 die(print_r($e));
 }
-// Если не удалось подключиться то выводит это
 if(!empty($_POST)) {
 try {
 $name = $_POST['name'];
 $email = $_POST['email'];
 $date = date("Y-m-d");
 $country = $_POST['country'];
-// Присваивает значения
 if ($name == "" || $email == "") {
 echo "<h3>Не заполнены поля name и email.</h3>";
-// Сравнивает name и email
 }
 else {
 $sql_insert ="INSERT INTO registration_on (name, email, date, country) VALUES (?,?,?,?)";
@@ -77,7 +70,6 @@ $stmt->bindValue(2, $email);
 $stmt->bindValue(3, $date);
 $stmt->bindValue(4, $country);
 $stmt->execute();
-// Добавляет в список регстрированных
 
 echo "<h3>Вы зарегистрировались!</h3>";
 }
@@ -95,7 +87,6 @@ $gender = $_POST['country'];
 $sql_select = "SELECT * FROM registration_on WHERE country like :country";
 $stmt = $conn->prepare($sql_select);
 $stmt->execute(array(':country'=>$country.'%'));
-// Производить фильтрацию по странам
 }
 $registrants = $stmt->fetchAll();
 if(count($registrants) > 0) {
@@ -115,7 +106,6 @@ echo "</table>";
 }
 else {
 echo "<h3>В настоящее время никто не зарегистрирован.</h3>";
-// Выводить данные о регистрированных 
 }
 
 ?>
