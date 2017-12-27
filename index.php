@@ -38,12 +38,13 @@ to register.</p>
 <option value="China">China</option>
 </select>
 <input type ="submit" name ="submit" value ="Отправить">
-<input type="submit" name="filter" value="Фильтр">и
+<input type="submit" name="filter" value="Фильтр">
 </form>
 
-try { 
-$conn = new PDO("sqlsrv:server = tcp:juuksqlserver.database.windows.net,1433; Database = juuksqlbase", "juuksqlserver", "200487pP"); 
-$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+<?php
+$dsn = "sqlsrv:server = tcp:rom.database.windows.net,1433; Database = qqq";
+$username = "rom";
+$password = "Rosbank1997";
 
 try {
 $conn = new PDO($dsn, $username, $password);
