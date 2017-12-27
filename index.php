@@ -40,7 +40,6 @@ to register.</p>
 <input type ="submit" name ="submit" value ="Отправить">
 <input type="submit" name="filter" value="Фильтр">
 </form>
-
 try {
     $conn = new PDO("sqlsrv:server = tcp:juuksqlserver.database.windows.net,1433; Database = juuksqlbase", "juuksqlserver", "{200487pP}");
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION)
@@ -66,7 +65,6 @@ $stmt->bindValue(2, $email);
 $stmt->bindValue(3, $date);
 $stmt->bindValue(4, $country);
 $stmt->execute();
-
 echo "<h3>Вы зарегистрировались!</h3>";
 }
 }
