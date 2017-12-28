@@ -64,6 +64,7 @@ $stmt->bindValue(1, $name);
 $stmt->bindValue(2, $email); 
 $stmt->bindValue(3, $password);
 $stmt->bindValue(4, $data);
+$stmt->bindValue(5, $tovar);
 $stmt->execute(); 
 } 
 catch(Exception $e) { 
