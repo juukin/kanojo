@@ -9,11 +9,9 @@ $sql = "CREATE TABLE registration_too(
 id INT NOT NULL IDENTITY(1,1),
 
 PRIMARY KEY(id),
-
 name VARCHAR(30),
-
 email VARCHAR(30),
-
+password VARCHAR(30),
 tovar VARCHAR(10),
 
 date DATE)»;
