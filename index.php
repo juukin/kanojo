@@ -89,7 +89,7 @@ echo "<tr><td>".$registrant['name']."</td>";
 echo "<td>".$registrant['email']."</td>";
 echo "<td>".$registrant['password']."</td>";
 echo "<td>".$registrant['date']."</td>";
-echo "<td>".$registrant['tovar']."<td></tr>";
+echo "<td>".$registrant['tovar']."</td>";
 } 
 echo "</table>"; 
 } else { 
