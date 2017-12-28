@@ -56,16 +56,18 @@ $name = $_POST['name'];
 $email = $_POST['email']; 
 $date = date("Y-m-d"); 
 $password = $_POST['password'];
-$tovar = $_POST['igr'];
+$tovar = $_POST['tovar'];
 $sql_insert = 
-"INSERT INTO registration_tbl (name, email, date, password, tovar) 
-VALUES (?,?,?,?,?)"; 
+"INSERT INTO registration_tbl (name, email, date, password, igr, car, kur) 
+VALUES (?,?,?,?,?,?,?)"; 
 $stmt = $conn->prepare($sql_insert); 
 $stmt->bindValue(1, $name); 
 $stmt->bindValue(2, $email); 
 $stmt->bindValue(3, $password);
 $stmt->bindValue(4, $data);
-$stmt->bindValue(5, $tovar);
+$stmt->bindValue(5, $igr);
+$stmt->bindValue(6, $car); 
+$stmt->bindValue(7, $kur);
 $stmt->execute(); 
 } 
 catch(Exception $e) { 
@@ -83,13 +85,17 @@ echo "<tr><th>Name</th>";
 echo "<th>Email</th>"; 
 echo "<th>password</th>";  
 echo "<th>Date</th></tr>";
-echo "<th>Tovar</th></tr";
+echo "<th>igr</th></tr>";
+echo "<th>car</th></tr";
+echo "<th>kur</th></tr";
 foreach($registrants as $registrant) { 
 echo "<tr><td>".$registrant['name']."</td>"; 
 echo "<td>".$registrant['email']."</td>";
 echo "<td>".$registrant['password']."</td>";
 echo "<td>".$registrant['date']."</td>";
-echo "<td>".$registrant['tovar']."<td></tr>";
+echo "<td>".$registrant['igr']."</td>";
+echo "<td>".$registrant['car']."</td>";
+echo "<td>".$registrant['kur']."<td></tr>";
 } 
 echo "</table>"; 
 } else { 
