@@ -33,11 +33,11 @@ name="email" id="email"/></br>
 Пароль <input type="text" 
 name="password" id="password"/></br>
 Выберте товар</br>
-Игрушка <input type="checkbox"
+Игрушка 100р <input type="checkbox"
 name="igr" value="100"/></br>
-Машина <input type="checkbox"
+Машина 500р <input type="checkbox"
 name="car" value="500"/></br>
-Куртка <input type="checkbox"
+Куртка 1000р <input type="checkbox"
 name="kur" value="1000"/></br>
 
 <input type="submit" 
