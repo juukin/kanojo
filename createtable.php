@@ -1,21 +1,34 @@
-<?php
-echo "123456";
+<?
+
 try {
-    $conn = new PDO("sqlsrv:server = tcp:juuksqlserver.database.windows.net,1433; Database = juuksqlbase", "juuksqlserver", "200487pP");
+    $conn = new PDO("sqlsrv:server = tcp:juuksqlserver.database.windows.net,1433; Database = juuksqlbase", "juuksqlserver", "{your_password_here}");
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-   
-    $sql = "CREATE TABLE registration_tbl(
-    id INT NOT NULL IDENTITY(1,1) 
-    PRIMARY KEY(id),
-    name VARCHAR(30),
-    password VARCHAR(30),
-    email VARCHAR(30),
-    date DATE)";
-    $conn->query($sql);
+
+$sql = "CREATE TABLE registration_too(
+
+id INT NOT NULL IDENTITY(1,1),
+
+PRIMARY KEY(id),
+
+name VARCHAR(30),
+
+email VARCHAR(30),
+
+tovar VARCHAR(10),
+
+date DATE)»;
+
+$conn->query($sql);
+
+echo «<h3>Таблица создана.</h3>»;
 }
 catch (PDOException $e) {
-    print("Error connecting to SQL Server.");
-    die(print_r($e));
+
+print("Ошибка подключения к SQL Server.");
+
+die(print_r($e));
+
 }
-echo"123";
+
 ?>
+
