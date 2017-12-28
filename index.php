@@ -32,6 +32,8 @@ Email <input type="text"
 name="email" id="email"/></br> 
 Пароль <input type="text" 
 name="password" id="password"/></br> 
+Товар <input type="checkbox"
+             name="tovar" value="100"/></br>
 
 <input type="submit" 
 name="submit" value="Зарегестироваться" /> 
