@@ -32,7 +32,7 @@ Email <input type="text"
 name="email" id="email"/></br> 
 Пароль <input type="text" 
 name="password" id="password"/></br>
-echo "Выберте товар"
+"Выберте товар"</br>
 Игрушка <input type="checkbox"
 name="igr" value="100"/></br>
 Машина <input type="checkbox"
