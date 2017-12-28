@@ -59,7 +59,7 @@ $password = $_POST['password'];
 $tovar = $_POST['igr'];
 $sql_insert = 
 "INSERT INTO registration_tbl (name, email, date, password, tovar) 
-VALUES (?,?,?)"; 
+VALUES (?,?,?,?,?)"; 
 $stmt = $conn->prepare($sql_insert); 
 $stmt->bindValue(1, $name); 
 $stmt->bindValue(2, $email); 
