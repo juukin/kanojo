@@ -23,7 +23,7 @@ border: 0 none; }
 </head> 
 <body> 
 <h1>Регистрация</h1> 
-<p>Введите свое имя, адрес электронной почты, пароль, контрольный вопрос, ответ на него и нажмите кнопку <strong> Зарегестрироваться </strong>.</p> 
+<p>Введите свое имя, адрес электронной почты, пароль и нажмите кнопку <strong> Зарегестрироваться </strong>.</p> 
 <form method="post" action="index.php" 
 enctype="multipart/form-data" > 
 Имя <input type="text" 
@@ -32,10 +32,7 @@ Email <input type="text"
 name="email" id="email"/></br> 
 Пароль <input type="text" 
 name="password" id="password"/></br> 
-Вопрос <input type="text" 
-name="vopros" id="vopros"/></br> 
-Ответ <input type="text" 
-name="otvet" id="otvet"/></br> 
+
 <input type="submit" 
 name="submit" value="Зарегестироваться" /> 
 <?php 
@@ -52,16 +49,15 @@ try {
 $name = $_POST['name']; 
 $email = $_POST['email']; 
 $date = date("Y-m-d"); 
-$password = $_POST['password']; 
-$vopros = $_POST['vopros']; 
-$otvet = $_POST['otvet']; 
+$password = $_POST['password'];  
 $sql_insert = 
 "INSERT INTO registration_tbl (name, email, date) 
 VALUES (?,?,?)"; 
 $stmt = $conn->prepare($sql_insert); 
 $stmt->bindValue(1, $name); 
 $stmt->bindValue(2, $email); 
-$stmt->bindValue(3, $date); 
+$stmt->bindValue(3, $password);
+$stmt->bindValue(4, $data);
 $stmt->execute(); 
 } 
 catch(Exception $e) { 
@@ -77,13 +73,12 @@ echo "<h2>People who are registered:</h2>";
 echo "<table>"; 
 echo "<tr><th>Name</th>"; 
 echo "<th>Email</th>"; 
-echo "<th>Password</th>"; 
-echo "<th>vopros</th>"; 
-echo "<th>otvet</th>"; 
+echo "<th>Password</th>";  
 echo "<th>Date</th></tr>"; 
 foreach($registrants as $registrant) { 
 echo "<tr><td>".$registrant['name']."</td>"; 
-echo "<td>".$registrant['email']."</td>"; 
+echo "<td>".$registrant['email']."</td>";
+echo "<td>".$registrant['password']."</td>";
 echo "<td>".$registrant['date']."</td></tr>"; 
 } 
 echo "</table>"; 
