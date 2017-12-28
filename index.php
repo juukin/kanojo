@@ -33,11 +33,11 @@ name="email" id="email"/></br>
 Пароль <input type="text" 
 name="password" id="password"/></br> 
 Игрушка <input type="checkbox"
-name="tovar" value="100"/></br>
+name="igr" value="100"/></br>
 Машина <input type="checkbox"
-name="tovar" value="500"/></br>
+name="car" value="500"/></br>
 Куртка <input type="checkbox"
-name="tovar" value="1000"/></br>
+name="kur" value="1000"/></br>
 
 <input type="submit" 
 name="submit" value="Зарегестироваться" /> 
@@ -55,7 +55,8 @@ try {
 $name = $_POST['name']; 
 $email = $_POST['email']; 
 $date = date("Y-m-d"); 
-$password = $_POST['password'];  
+$password = $_POST['password'];
+$tovar = $_POST['igr','car','kur'];
 $sql_insert = 
 "INSERT INTO registration_tbl (name, email, date) 
 VALUES (?,?,?)"; 
@@ -81,12 +82,14 @@ echo "<table>";
 echo "<tr><th>Name</th>"; 
 echo "<th>Email</th>"; 
 echo "<th>Password</th>";  
-echo "<th>Date</th></tr>"; 
+echo "<th>Date</th></tr>";
+echo "<th>Tovar</th></tr";
 foreach($registrants as $registrant) { 
 echo "<tr><td>".$registrant['name']."</td>"; 
 echo "<td>".$registrant['email']."</td>";
 echo "<td>".$registrant['password']."</td>";
-echo "<td>".$registrant['date']."</td></tr>"; 
+echo "<td>".$registrant['date']."</td></td>";
+echo "<td>".$registrant['igr','car','kur']."<td></tr>";
 } 
 echo "</table>"; 
 } else { 
