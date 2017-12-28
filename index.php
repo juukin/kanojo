@@ -81,15 +81,15 @@ echo "<h2>People who are registered:</h2>";
 echo "<table>"; 
 echo "<tr><th>Name</th>"; 
 echo "<th>Email</th>"; 
-echo "<th>Password</th>";  
+echo "<th>password</th>";  
 echo "<th>Date</th></tr>";
 echo "<th>Tovar</th></tr";
 foreach($registrants as $registrant) { 
 echo "<tr><td>".$registrant['name']."</td>"; 
 echo "<td>".$registrant['email']."</td>";
 echo "<td>".$registrant['password']."</td>";
-echo "<td>".$registrant['date']."</td></td>";
-echo "<td>".$registrant['igr']."<td></tr>";
+echo "<td>".$registrant['date']."</td>";
+echo "<td>".$registrant['tovar']."<td></tr>";
 } 
 echo "</table>"; 
 } else { 
