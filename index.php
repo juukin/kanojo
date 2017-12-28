@@ -31,7 +31,8 @@ name="name" id="name"/></br>
 Email <input type="text" 
 name="email" id="email"/></br> 
 Пароль <input type="text" 
-name="password" id="password"/></br> 
+name="password" id="password"/></br>
+echo "Выберте товар"
 Игрушка <input type="checkbox"
 name="igr" value="100"/></br>
 Машина <input type="checkbox"
