@@ -28,36 +28,22 @@ email address, then click <strong>Submit</strong>
 to register.</p> 
 <form method="post" action="index.php" 
 enctype="multipart/form-data" > 
-  <td>Сыр</td>
-  <td align="center"><input type="text" name="tireqty" size= "3" maxlength="3"></td>
-</tr>
-<tr>
-  <td>Растительное масло</td>
-  <td align= "center"><input type="text" name="oilqty" size="3" maxlength="3"></td>
-</tr>
-<tr>
-  <td>Майонез</td>
-  <td align="center"><input type="text" name="sparkqty" size= "3" maxlength="3"></td>
-</tr>
-<tr>
-  <td>Ваш адрес</td>
-  <td align="center"><input type="text" name="address"></td>
-</tr>
-  <tr>
-  <td>Ваше имя</td>
-  <td align="center"><input type="text" name="name"></td>
-    <tr>
-  <td>Ваш телефон</td>
-  <td align="center"><input type="text" name="phone"></td>
-</tr>
-<tr>
-  <td colspan="2" align="center"><input type="submit" value= "Подтвердить заказ"></td>
-</tr>
-</table>
-</form>
- <?php  
+tireqty <input type="text" 
+name="tireqty" id="tireqty"/></br> 
+oilqty <input type="text" 
+name="oilqty" id="oilqty"/></br>
+sparkqty <input type="text" 
+name="sparkqty" id="sparkqty"/></br>
+adress <input type="text" 
+name="adress" id="adress"/></br>
+name <input type="text" 
+name="name" id="name"/></br>
+phone <input type="phone" 
+name="phone" id="phone"/></br>
+<input type="submit" 
+name="submit" value="Submit" /> 
 </form> 
-<?php 
+<?php  
 try { 
 $conn = new PDO("sqlsrv:server = tcp:juuksqlserver.database.windows.net,1433; Database = juuksqlbase", "juuksqlserver", "200487pP"); 
 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
