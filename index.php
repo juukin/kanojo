@@ -41,7 +41,15 @@
 </tr>
 </table>
 </form>
- 
+ <?php 
+try { 
+$conn = new PDO("sqlsrv:server = tcp:juuksqlserver.database.windows.net,1433; Database = juuksqlbase", "juuksqlserver", "200487pP"); 
+$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
+} 
+catch (PDOException $e) { 
+print("Error connecting to SQL Server."); 
+die(print_r($e)); 
+} 
 </body>
 </html>
 
@@ -52,6 +60,8 @@
   $oilqty = $HTTP_POST_VARS['oilqty'];
   $sparkqty = $HTTP_POST_VARS['sparkqty'];
   $address = $HTTP_POST_VARS['address'];
+  $name = $HTTP_POST_VARS['name'];
+  $phone = $HTTP_POST_VARS['phone'];
 ?>
 <html>
 <head>
@@ -72,7 +82,7 @@
 if ($totalqty == 0)
 {
     echo '<font color=red>';
-    echo 'Вы ничего не заказали!!!';
+    echo 'Вы ничего не заказали!';
     echo '</font>';
     exit;
 }
@@ -81,6 +91,8 @@ if ($totalqty == 0)
   echo $oilqty . ' - растительного масла;</br>';
   echo $sparkqty . ' - майонеза;</br>';
   echo 'Ваш адрес:  ' . "$address</br>";
+  echo 'Ваше имя: ' . "$name</br>";
+  echo 'Ваш телефон: ' . "$phone</br>";
   echo 'Ваш заказ: '. "$totalqty</br>";
  
   $totalamount = 0.00;
@@ -102,8 +114,6 @@ if ($totalqty == 0)
   echo "<p>Заказ обработан: "; echo date('H:i, jS F');
   $date = date('H:i, jS F');
    
-// открываем файл, указав абсолютный путь /var/www/html/orders/orders.txt 
-  @ $fp = fopen("/var/www/html/orders/orders.txt", "a");
  
 flock($fp, 2); // блокируем файл – файл недоступен другим
 //Проверяем, открылся ли файл. Если мы вошли внутрь файла, 
