@@ -7,7 +7,8 @@
 <h1>Универмаг Краснодар</h1>
 <h2>Результаты заказа</h2>
  
-<form action="php_var.php" method=post>
+<form method="post" action="index.php" 
+enctype="multipart/form-data" > 
 <table border=1>
 <tr bgcolor=#cccccc>
   <td width=150>Товар</td>
