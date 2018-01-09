@@ -12,6 +12,7 @@ oilqty VARCHAR(30),
 sparkqty VARCHAR(30),
 address VARCHAR(30),
 name VARCHAR(30),
+phone VARCHAR(30),
 date DATE)»;
 $conn->query($sql);
 echo «<h3>Таблица создана.</h3>»;
