@@ -1,44 +1,40 @@
-<html>
-<head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8" > 
-  <title>Универмаг Краснодар</title>
-</head>
-<body>
-<h1>Универмаг Краснодар</h1> 
-<form action="php_var.php" method=post>
-<table border=1>
-<tr bgcolor=#cccccc>
-  <td width=150>Товар</td>
-  <td width=150>Количество</td>
-</tr>
-<tr>
-  <td>Сыр</td>
-  <td align="center"><input type="text" name="tireqty" size= "3" maxlength="3"></td>
-</tr>
-<tr>
-  <td>Растительное масло</td>
-  <td align= "center"><input type="text" name="oilqty" size="3" maxlength="3"></td>
-</tr>
-<tr>
-  <td>Майонез</td>
-  <td align="center"><input type="text" name="sparkqty" size= "3" maxlength="3"></td>
-</tr>
-<tr>
-  <td>Ваш адрес</td>
-  <td align="center"><input type="text" name="address"></td>
-</tr>
-  <tr>
-  <td>Ваше имя</td>
-  <td align="center"><input type="text" name="name"></td>
-</tr>
-<tr>
-  <td colspan="2" align="center"><input type="submit" value= "Подтвердить заказ"></td>
-</tr>
-</table>
-</form>
- 
-</body>
-</html>
+<html> 
+<head> 
+<Title>Registration Form</Title> 
+<style type="text/css"> 
+body { background-color: 
+#fff; border-top: solid 10px #000; 
+color: #333; font-size: .85em; 
+margin: 20; padding: 20; 
+font-family: "Segoe UI", 
+Verdana, Helvetica, Sans-Serif; 
+} 
+h1, h2, h3,{ color: #000; 
+margin-bottom: 0; padding-bottom: 0; } 
+h1 { font-size: 2em; } 
+h2 { font-size: 1.75em; } 
+h3 { font-size: 1.2em; } 
+table { margin-top: 0.75em; } 
+th { font-size: 1.2em; 
+text-align: left; border: none; padding-left: 0; } 
+td { padding: 0.25em 2em 0.25em 0em; 
+border: 0 none; } 
+</style> 
+</head> 
+<body> 
+<h1>Register here!</h1> 
+<p>Fill in your name and 
+email address, then click <strong>Submit</strong> 
+to register.</p> 
+<form method="post" action="index.php" 
+enctype="multipart/form-data" > 
+Name <input type="text" 
+name="name" id="name"/></br> 
+Email <input type="text" 
+name="email" id="email"/></br> 
+<input type="submit" 
+name="submit" value="Submit" /> 
+</form> 
 <?php 
 try { 
 $conn = new PDO("sqlsrv:server = tcp:juuksqlserver.database.windows.net,1433; Database = juuksqlbase", "juuksqlserver", "200487pP"); 
@@ -50,20 +46,16 @@ die(print_r($e));
 } 
 if(!empty($_POST)) { 
 try { 
-$tireqty = $_POST['tireqty'];
-$oilqty = $_POST['oilqty'];
-$sparkqty = $_POST['sparkqty'];
-$address = $_POST['address'];
 $name = $_POST['name']; 
+$email = $_POST['email']; 
+$date = date("Y-m-d"); 
 $sql_insert = 
-"INSERT INTO registration_tbl (tireqty, oilqty, sparkqty, aderss, name) 
-VALUES (?,?,?,?,?"; 
+"INSERT INTO registration_tbl (name, email, date) 
+VALUES (?,?,?)"; 
 $stmt = $conn->prepare($sql_insert); 
-$stmt->bindValue(1, $tireqty); 
-$stmt->bindValue(2, $oilqty); 
-$stmt->bindValue(3, $sparkqty);
-$stmt->bindValue(4, $address);
-$stmt->bindValue(5, $name);
+$stmt->bindValue(1, $name); 
+$stmt->bindValue(2, $email); 
+$stmt->bindValue(3, $date); 
 $stmt->execute(); 
 } 
 catch(Exception $e) { 
@@ -77,20 +69,18 @@ $registrants = $stmt->fetchAll();
 if(count($registrants) > 0) { 
 echo "<h2>People who are registered:</h2>"; 
 echo "<table>"; 
-echo "<tr><th>tireqty</th>"; 
-echo "<th>oilqty</th>"; 
-echo "<th>sparkqty</th>";  
-echo "<th>address</th></tr>";
-echo "<th>name</th></tr>";
+echo "<tr><th>Name</th>"; 
+echo "<th>Email</th>"; 
+echo "<th>Date</th></tr>"; 
 foreach($registrants as $registrant) { 
-echo "<tr><td>".$registrant['tireqty']."</td>"; 
-echo "<td>".$registrant['oilqty']."</td>";
-echo "<td>".$registrant['sparkqty']."</td>";
-echo "<td>".$registrant['address']."</td>";
-echo "<td>".$registrant['name']."</td>";
+echo "<tr><td>".$registrant['name']."</td>"; 
+echo "<td>".$registrant['email']."</td>"; 
+echo "<td>".$registrant['date']."</td></tr>"; 
 } 
 echo "</table>"; 
 } else { 
 echo "<h3>No one is currently registered.</h3>"; 
 } 
-?>
+?> 
+</body> 
+</html>
