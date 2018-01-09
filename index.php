@@ -75,8 +75,7 @@ $oilqty = $_POST['oilqty'];
 $sparkqty = $_POST['sparkqty'];
 $adress = $_POST['adress'];
 $name = $_POST['name'];
-$phone = $_POST['phone'];
-$date = date("Y-m-d"); 
+$phone = $_POST['phone']; 
 $sql_insert = 
 "INSERT INTO registration_tbl (name, email, date) 
 VALUES (?,?,?,?,?,?)"; 
@@ -105,16 +104,14 @@ echo "<th>oilqty</th>";
 echo "<th>sparkqty</th>";
 echo "<th>adress</th>";
 echo "<th>name</th>";
-echo "<th>phone</th>";
-echo "<th>Date</th></tr>"; 
+echo "<th>phone</th></tr>";
 foreach($registrants as $registrant) { 
 echo "<tr><td>".$registrant['tireqty']."</td>"; 
 echo "<td>".$registrant['oilqty']."</td>";
 echo "<td>".$registrant['sparkqty']."</td>";
 echo "<td>".$registrant['adress']."</td>";
 echo "<td>".$registrant['name']."</td>";
-echo "<td>".$registrant['phone']."</td>";
-echo "<td>".$registrant['date']."</td></tr>"; 
+echo "<td>".$registrant['phone']."</td></tr>";
 } 
 echo "</table>"; 
 } else { 
