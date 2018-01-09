@@ -28,12 +28,12 @@ email address, then click <strong>Submit</strong>
 to register.</p> 
 <form method="post" action="index.php" 
 enctype="multipart/form-data" > 
-tireqty <input type="text" 
-name="сыр" id="tireqty"/></br> 
-oilqty <input type="text" 
-name="масло" id="oilqty"/></br>
-sparkqty <input type="text" 
-name="майонез" id="sparkqty"/></br>
+Сыр <input type="text" 
+name="tireqty" id="tireqty"/></br> 
+Масло <input type="text" 
+name="oilqty" id="oilqty"/></br>
+Майонез <input type="text" 
+name="sparkqty" id="sparkqty"/></br>
 adress <input type="text" 
 name="adress" id="adress"/></br>
 name <input type="text" 
