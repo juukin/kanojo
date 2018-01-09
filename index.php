@@ -1,4 +1,4 @@
-\<html>
+<html>
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8" > 
   <title>Универмаг Краснодар</title>
@@ -29,15 +29,11 @@
   <td>Ваш адрес</td>
   <td align="center"><input type="text" name="address"></td>
 </tr>
- <tr>
-  <td>Ваше имя</td>
-  <td align="center"><input type="text" name="name"></td>
-</tr>
 <tr>
   <td colspan="2" align="center"><input type="submit" value= "Подтвердить заказ"></td>
 </tr>
 </table>
 </form>
-<?php 
+ 
 </body>
 </html>
