@@ -56,37 +56,40 @@ $sparkqty = $_POST['sparkqty'];
 $address = $_POST['address'];
 $name = $_POST['name']; 
 
-?>
-<html>
-<head>
-<title>Универмаг Краснодар</title>
-</head>
-<body>
-<h1>Универмаг Краснодар</h1>
-<h2>Ваш заказ</h2>
- 
-<?php
-  
-  $totalqty = 0;
-  $totalqty = $tireqty + $oilqty + $sparkqty;
- 
-if ($totalqty == 0)
-{
-    echo '<font color=red>';
-    echo 'Вы ничего не заказали!';
-    echo '</font>';
-    exit;
-}
-  echo '<p>Результаты Вашего заказа:</p>';
-  echo $tireqty . ' - сыра;</br>';
-  echo $oilqty . ' - растительного масла;</br>';
-  echo $sparkqty . ' - майонеза;</br>';
-  echo 'Ваш адрес:  ' . "$address</br>";
-  echo 'Ваше имя:  ' . "$name</br>";
-  echo 'Ваш заказ: '. "$totalqty</br>";
- 
-  $totalamount = 0.00;
-  } 
+$sql_insert = 
+"INSERT INTO registration_tbl (tireqty, oilqty, sparkqty, aderss, name) 
+VALUES (?,?,?,?,?"; 
+$stmt = $conn->prepare($sql_insert); 
+$stmt->bindValue(1, $tireqty); 
+$stmt->bindValue(2, $oilqty); 
+$stmt->bindValue(3, $sparkqty);
+$stmt->bindValue(4, $address);
+$stmt->bindValue(5, $name);
+$stmt->execute(); 
+} 
+catch(Exception $e) { 
+die(var_dump($e)); 
+} 
+echo "<h3>Your're registered!</h3>"; 
+} 
+$sql_select = "SELECT * FROM registration_tbl"; 
+$stmt = $conn->query($sql_select); 
+$registrants = $stmt->fetchAll(); 
+if(count($registrants) > 0) { 
+echo "<h2>People who are registered:</h2>"; 
+echo "<table>"; 
+echo "<tr><th>tireqty</th>"; 
+echo "<th>oilqty</th>"; 
+echo "<th>sparkqty</th>";  
+echo "<th>address</th></tr>";
+echo "<th>name</th></tr>";
+foreach($registrants as $registrant) { 
+echo "<tr><td>".$registrant['tireqty']."</td>"; 
+echo "<td>".$registrant['oilqty']."</td>";
+echo "<td>".$registrant['sparkqty']."</td>";
+echo "<td>".$registrant['address']."</td>";
+echo "<td>".$registrant['name']."</td>";
+} 
 echo "</table>"; 
 } else { 
 echo "<h3>No one is currently registered.</h3>"; 
