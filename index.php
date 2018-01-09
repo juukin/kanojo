@@ -59,7 +59,6 @@ $name = $_POST['name'];
 ?>
 <html>
 <head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <title>Универмаг Краснодар</title>
 </head>
 <body>
@@ -74,7 +73,7 @@ $name = $_POST['name'];
 if ($totalqty == 0)
 {
     echo '<font color=red>';
-    echo 'Вы ничего не заказали!!!';
+    echo 'Вы ничего не заказали!';
     echo '</font>';
     exit;
 }
