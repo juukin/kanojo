@@ -54,12 +54,12 @@ die(print_r($e));
 } 
 if(!empty($_POST)) { 
 try { 
-$tireqty = $_POST['tireqty']; 
-$oilqty = $_POST['oilqty'];
-$sparkqty = $_POST['sparkqty'];
-$adress = $_POST['adress'];
-$name = $_POST['name'];
-$phone = $_POST['phone']; 
+$tireqty = $HTTP_POST_VARS['tireqty'];
+$oilqty = $HTTP_POST_VARS['oilqty'];
+$sparkqty = $HTTP_POST_VARS['sparkqty'];
+$address = $HTTP_POST_VARS['address'];
+$name = $HTTP_POST_VARS['name'];
+$phone = $HTTP_POST_VARS['phone'];
 $sql_insert = 
 "INSERT INTO registration_tbl (tireqty, oilqty, sparkqty, adress, name, phone) 
 VALUES (?,?,?,?,?,?)"; 
