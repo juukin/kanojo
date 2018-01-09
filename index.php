@@ -56,9 +56,12 @@ $sparkqty = $_POST['sparkqty'];
 $address = $_POST['address'];
 $name = $_POST['name']; 
 
+  $totalqty = 0;
+  $totalqty = $tireqty + $oilqty + $sparkqty;
+  
 $sql_insert = 
 "INSERT INTO registration_tbl (tireqty, oilqty, sparkqty, aderss, name) 
-VALUES (?,?,?,?,?"; 
+VALUES (?,?,?,?,?); 
 $stmt = $conn->prepare($sql_insert); 
 $stmt->bindValue(1, $tireqty); 
 $stmt->bindValue(2, $oilqty); 
