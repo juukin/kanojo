@@ -67,9 +67,9 @@ $stmt = $conn->prepare($sql_insert);
 $stmt->bindValue(1, $tireqty); 
 $stmt->bindValue(2, $oilqty); 
 $stmt->bindValue(3, $sparkqty);
-$stmt->bindValue(3, $adress);
-$stmt->bindValue(3, $name);
-$stmt->bindValue(3, $phone);
+$stmt->bindValue(4, $adress);
+$stmt->bindValue(5, $name);
+$stmt->bindValue(6, $phone);
 $stmt->execute(); 
 } 
 catch(Exception $e) { 
