@@ -55,9 +55,6 @@ $oilqty = $_POST['oilqty'];
 $sparkqty = $_POST['sparkqty'];
 $address = $_POST['address'];
 $name = $_POST['name']; 
-
-  $totalqty = 0;
-  $totalqty = $tireqty + $oilqty + $sparkqty;
   
 $sql_insert = 
 "INSERT INTO registration_tbl (tireqty, oilqty, sparkqty, aderss, name) 
