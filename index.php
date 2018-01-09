@@ -29,21 +29,51 @@
   <td>Ваш адрес</td>
   <td align="center"><input type="text" name="address"></td>
 </tr>
+ <tr>
+  <td>Ваше имя</td>
+  <td align="center"><input type="text" name="name"></td>
+</tr>
 <tr>
   <td colspan="2" align="center"><input type="submit" value= "Подтвердить заказ"></td>
 </tr>
 </table>
 </form>
- 
+ <?php 
+try { 
+$conn = new PDO("sqlsrv:server = tcp:juuksqlserver.database.windows.net,1433; Database = juuksqlbase", "juuksqlserver", "200487pP"); 
+$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
+} 
+catch (PDOException $e) { 
+print("Error connecting to SQL Server."); 
+die(print_r($e)); 
+} 
+if(!empty($_POST)) { 
+try { 
+$tireqty = $_POST['tireqty']; 
+$email = $_POST['email']; 
+$date = date("Y-m-d"); 
+$password = $_POST['password'];
+$tovar = $_POST['tovar'];
+$sql_insert = 
+"INSERT INTO registration_tbl (Ваш заказ, адрес, имя) 
+VALUES (?,?,?,?,?,?,?)"; 
+$stmt = $conn->prepare($sql_insert); 
+$stmt->bindValue(1, $name); 
+$stmt->bindValue(2, $oilqty); 
+$stmt->bindValue(3, $sparkqty);
+$stmt->bindValue(4, $adress);
+$stmt->bindValue(5, $name);
+$stmt->execute(); 
+} 
+catch(Exception $e) { 
+die(var_dump($e)); 
+} 
+echo "<h3>Your're registered!</h3>"; 
+}
 </body>
 </html>
 <?php
-//Создаем короткие имена переменных, используя длинную форму записи.
- 
-  $tireqty = $HTTP_POST_VARS['tireqty'];
-  $oilqty = $HTTP_POST_VARS['oilqty'];
-  $sparkqty = $HTTP_POST_VARS['sparkqty'];
-  $address = $HTTP_POST_VARS['address'];
+
 ?>
 <html>
 <head>
@@ -73,6 +103,7 @@ if ($totalqty == 0)
   echo $oilqty . ' - растительного масла;</br>';
   echo $sparkqty . ' - майонеза;</br>';
   echo 'Ваш адрес:  ' . "$address</br>";
+ echo 'Ваше имя:  ' . "$name</br>";
   echo 'Ваш заказ: '. "$totalqty</br>";
  
   $totalamount = 0.00;
