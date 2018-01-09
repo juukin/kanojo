@@ -76,7 +76,7 @@ if ($totalqty == 0)
   echo 'Ваш заказ: '. "$totalqty</br>";
  
   $totalamount = 0.00;
-  // Расчет итоговой суммы с учетом цен в прайс-листе
+ 
  
   define('TIREPRICE',100); 
   define('OILPRICE',10);
@@ -93,29 +93,6 @@ if ($totalqty == 0)
   number_format($totalamount,3).' руб'.'<br>';
   echo "<p>Заказ обработан: "; echo date('H:i, jS F');
   $date = date('H:i, jS F');
-   
-// открываем файл, указав абсолютный путь /var/www/html/orders/orders.txt 
-  @ $fp = fopen("/var/www/html/orders/orders.txt", "a");
- 
-flock($fp, 2); // блокируем файл – файл недоступен другим
-//Проверяем, открылся ли файл. Если мы вошли внутрь файла, 
-то $fp имеет значение //TRUE
-if (!$fp)
- {
-  echo '<p><strong>Вы не можете сейчас сделать заказ – 
-  база данных недоступна!.</strong></p>';
-  exit;
- }
-//Если файл доступен – идет запись в строку для каждого заказа
-$outputstring=$date."\t".$tireqty."tire\t"
-.$oilqty."oil\t"
-.$sparkqty."spark\t\$".$totalamount."\t".$address."\n";
-// записываем данные в файл 
-fwrite($fp, $outputstring);
- 
-flock($fp, 3); // Снимаем блокировку файла
-fclose($fp); // закрываем файл
-#echo phpinfo();
-?>
+  
 </body>
 </html>
