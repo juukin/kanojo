@@ -4,8 +4,7 @@
   <title>Универмаг Краснодар</title>
 </head>
 <body>
-<h1>Универмаг Краснодар</h1>
-<h2>Результаты заказа</h2> 
+<h1>Универмаг Краснодар</h1> 
 <form action="php_var.php" method=post>
 <table border=1>
 <tr bgcolor=#cccccc>
