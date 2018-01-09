@@ -23,8 +23,6 @@ border: 0 none; }
 </head>
 <body>
 <h1>Универмаг Краснодар</h1>
-<h2>Результаты заказа</h2>
- 
 <form action="php_var.php" method=post>
 <table border=1>
 <tr bgcolor=#cccccc>
@@ -115,7 +113,7 @@ echo "<td>".$registrant['oilqty']."</td>";
 echo "<td>".$registrant['sparkqty']."</td>";
 echo "<td>".$registrant['adress']."</td>";
 echo "<td>".$registrant['name']."</td>";
-echo "<td>".$registrant['[phone']."</td>";
+echo "<td>".$registrant['phone']."</td>";
 echo "<td>".$registrant['date']."</td></tr>"; 
 } 
 echo "</table>"; 
