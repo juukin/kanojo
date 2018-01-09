@@ -7,7 +7,7 @@ try {
 $sql = "CREATE TABLE registration_tbl(
 id INT NOT NULL IDENTITY(1,1),
 PRIMARY KEY(id),
-tireqty VARCHAR(30),
+sir VARCHAR(30),
 oilqty VARCHAR(30),
 sparkqty VARCHAR(30),
 address VARCHAR(30),
