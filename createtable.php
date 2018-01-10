@@ -4,6 +4,11 @@ try {
     $conn = new PDO("sqlsrv:server = tcp:juuksqlserver.database.windows.net,1433; Database = juuksqlbase", "juuksqlserver", "200487pP");
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
+    
+    
+    
+    
+    
 $sql = "CREATE TABLE registration_top(
 id INT NOT NULL IDENTITY(1,1),
 PRIMARY KEY(id),
