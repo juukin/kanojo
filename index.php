@@ -1,7 +1,7 @@
-<html> 
-<head> 
-<Title>Registration Form</Title> 
-<style type="text/css"> 
+<html>
+<head>
+<Title>Registration Form</Title>
+<style type="text/css">
 body { background-color: 
 #fff; border-top: solid 10px #000; 
 color: #333; font-size: .85em; 
@@ -19,29 +19,31 @@ th { font-size: 1.2em;
 text-align: left; border: none; padding-left: 0; } 
 td { padding: 0.25em 2em 0.25em 0em; 
 border: 0 none; } 
-</style> 
-</head> 
-<body> 
-<h1>Register here!</h1> 
+</style>
+</head>
+<body>
+<h1>Register here!</h1>
 <p>Fill in your name and 
-email address, then click <strong>Submit</strong> 
-to register.</p> 
+email address, then click <strong>Submit</strong>
+to register.</p>
 <form method="post" action="index.php" 
-enctype="multipart/form-data" > 
-Масло <input type="text" 
+enctype="multipart/form-data" >
+Сыр<input type="text" 
+name="tireqty" size= "3" maxlength="3" id="tireqty"/></br>
+Масло<input type="text" 
 name="oilqty" size= "3" maxlength="3" id="oilqty"/></br>
-Майонез <input type="text" 
+Майонез<input type="text" 
 name="sparkqty" size= "3" maxlength="3" id="sparkqty"/></br>
-adress <input type="text" 
+adress<input type="text" 
 name="adress" id="adress"/></br>
-name <input type="text" 
+name<input type="text" 
 name="name" id="name"/></br>
-phone <input type="phone" 
+phone<input type="phone" 
 name="phone" id="phone"/></br>
 <input type="submit" 
-name="submit" value="Submit" /> 
-</form> 
-<?php  
+name="submit" value="Submit" />
+</form>
+<?php
 try { 
 $conn = new PDO("sqlsrv:server = tcp:juuksqlserver.database.windows.net,1433; Database = juuksqlbase", "juuksqlserver", "200487pP"); 
 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
@@ -52,20 +54,22 @@ die(print_r($e));
 } 
 if(!empty($_POST)) { 
 try { 
-$oilqty = $HTTP_POST_VARS['oilqty'];
-$sparkqty = $HTTP_POST_VARS['sparkqty'];
-$address = $HTTP_POST_VARS['address'];
-$name = $HTTP_POST_VARS['name'];
-$phone = $HTTP_POST_VARS['phone'];
+$tireqty = $_POST['tireqty']; 
+$oilqty = $_POST['oilqty'];
+$sparkqty = $_POST['sparkqty'];
+$adress = $_POST['adress'];
+$name = $_POST['name'];
+$phone = $_POST['phone']; 
 $sql_insert = 
-"INSERT INTO registration_tbl (oilqty, sparkqty, adress, name, phone) 
+"INSERT INTO registration_tbl (tireqty, oilqty, sparkqty, adress, name, phone) 
 VALUES (?,?,?,?,?,?)"; 
 $stmt = $conn->prepare($sql_insert); 
-$stmt->bindValue(1, $oilqty); 
-$stmt->bindValue(2, $sparkqty);
-$stmt->bindValue(3 $adress);
-$stmt->bindValue(4 $name);
-$stmt->bindValue(5 $phone);
+$stmt->bindValue(1, $tireqty); 
+$stmt->bindValue(2, $oilqty); 
+$stmt->bindValue(3, $sparkqty);
+$stmt->bindValue(4, $adress);
+$stmt->bindValue(5, $name);
+$stmt->bindValue(6, $phone);
 $stmt->execute(); 
 } 
 catch(Exception $e) { 
@@ -78,13 +82,15 @@ $stmt = $conn->query($sql_select);
 $registrants = $stmt->fetchAll(); 
 if(count($registrants) > 0) { 
 echo "<h2>People who are registered:</h2>"; 
-echo "<table>";  
-echo "<tr><th>oilqty</th>"; 
+echo "<table>"; 
+echo "<tr><th>tireqty</th>"; 
+echo "<th>oilqty</th>"; 
 echo "<th>sparkqty</th>";
 echo "<th>adress</th>";
 echo "<th>name</th>";
 echo "<th>phone</th></tr>";
-foreach($registrants as $registrant) {  
+foreach($registrants as $registrant) { 
+echo "<tr><td>".$registrant['tireqty']."</td>"; 
 echo "<td>".$registrant['oilqty']."</td>";
 echo "<td>".$registrant['sparkqty']."</td>";
 echo "<td>".$registrant['adress']."</td>";
@@ -95,6 +101,7 @@ echo "</table>";
 } else { 
 echo "<h3>No one is currently registered.</h3>"; 
 } 
-?> 
-</body> 
+?>
+</body>
 </html>
+
