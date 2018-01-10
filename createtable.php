@@ -14,7 +14,9 @@ try {
     
     
     
-$sql = "CREATE TABLE registration_tov(
+    
+    
+$sql = "CREATE TABLE registration_top(
 id INT NOT NULL IDENTITY(1,1),
 PRIMARY KEY(id),
 tireqty VARCHAR(30),
