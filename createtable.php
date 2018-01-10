@@ -5,7 +5,7 @@ try {
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     
  
-$sql = "CREATE TABLE registration_top(
+$sql = "CREATE TABLE registration_top"(
 id INT NOT NULL IDENTITY(1,1),
 PRIMARY KEY(id);
 tireqty VARCHAR(30);
@@ -19,7 +19,7 @@ echo «<h3>Таблица создана.</h3>»;
 }
 catch (PDOException $e) 
 print("Ошибка подключения к SQL Server.");
-die(print_r($e))";
+die(print_r($e));
 }
 
 ?>
