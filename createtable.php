@@ -14,7 +14,7 @@ try {
     
     
     
-$sql = "CREATE TABLE registration_too(
+$sql = "CREATE TABLE registration_tov(
 id INT NOT NULL IDENTITY(1,1),
 PRIMARY KEY(id),
 tireqty VARCHAR(30),
