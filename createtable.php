@@ -12,7 +12,7 @@ try {
     
     
     
-    $sql = "CREATE TABLEE registration_file(
+    $sql = "CREATE TABLE registration_tbl(
 id INT NOT NULL IDENTITY(1,1),
 PRIMARY KEY(id),
 tire VARCHAR(30),
