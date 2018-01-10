@@ -9,10 +9,7 @@ try {
     
     
     
-    
-    
-    
-    $sql = "CREATE TABLE registration_tbl(
+$sql = "CREATE TABLE registration_too(
 id INT NOT NULL IDENTITY(1,1),
 PRIMARY KEY(id),
 tire VARCHAR(30),
