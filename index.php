@@ -28,8 +28,6 @@ email address, then click <strong>Submit</strong>
 to register.</p> 
 <form method="post" action="index.php" 
 enctype="multipart/form-data" > 
-Сыр <input type="text" 
-name="sir" size= "3" maxlength="3" id="sir"/></br> 
 Масло <input type="text" 
 name="oilqty" size= "3" maxlength="3" id="oilqty"/></br>
 Майонез <input type="text" 
@@ -54,22 +52,20 @@ die(print_r($e));
 } 
 if(!empty($_POST)) { 
 try { 
-$sir = $HTTP_POST_VARS['sir'];
 $oilqty = $HTTP_POST_VARS['oilqty'];
 $sparkqty = $HTTP_POST_VARS['sparkqty'];
 $address = $HTTP_POST_VARS['address'];
 $name = $HTTP_POST_VARS['name'];
 $phone = $HTTP_POST_VARS['phone'];
 $sql_insert = 
-"INSERT INTO registration_tbl (sir, oilqty, sparkqty, adress, name, phone) 
+"INSERT INTO registration_tbl (oilqty, sparkqty, adress, name, phone) 
 VALUES (?,?,?,?,?,?)"; 
 $stmt = $conn->prepare($sql_insert); 
-$stmt->bindValue(1, $sir); 
-$stmt->bindValue(2, $oilqty); 
-$stmt->bindValue(3, $sparkqty);
-$stmt->bindValue(4, $adress);
-$stmt->bindValue(5, $name);
-$stmt->bindValue(6, $phone);
+$stmt->bindValue(1, $oilqty); 
+$stmt->bindValue(2, $sparkqty);
+$stmt->bindValue(3 $adress);
+$stmt->bindValue(4 $name);
+$stmt->bindValue(5 $phone);
 $stmt->execute(); 
 } 
 catch(Exception $e) { 
@@ -82,15 +78,13 @@ $stmt = $conn->query($sql_select);
 $registrants = $stmt->fetchAll(); 
 if(count($registrants) > 0) { 
 echo "<h2>People who are registered:</h2>"; 
-echo "<table>"; 
-echo "<tr><th>sir</th>"; 
-echo "<th>oilqty</th>"; 
+echo "<table>";  
+echo "<tr><th>oilqty</th>"; 
 echo "<th>sparkqty</th>";
 echo "<th>adress</th>";
 echo "<th>name</th>";
 echo "<th>phone</th></tr>";
-foreach($registrants as $registrant) { 
-echo "<tr><td>".$registrant['sir']."</td>"; 
+foreach($registrants as $registrant) {  
 echo "<td>".$registrant['oilqty']."</td>";
 echo "<td>".$registrant['sparkqty']."</td>";
 echo "<td>".$registrant['adress']."</td>";
