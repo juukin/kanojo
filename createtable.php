@@ -5,8 +5,8 @@ try {
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     
  
-$sql = "CREATE TABLE registration_top"(
-id INT NOT NULL IDENTITY(1,1),
+$sql = "CREATE TABLE registration_top(
+id INT NOT NULL IDENTITY(1,1)",
 PRIMARY KEY(id);
 tireqty VARCHAR(30);
 oilqty VARCHAR(30);
