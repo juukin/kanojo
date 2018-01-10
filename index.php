@@ -70,7 +70,9 @@ $stmt->bindValue(3, $sparkqty);
 $stmt->bindValue(4, $adress);
 $stmt->bindValue(5, $name);
 $stmt->bindValue(6, $phone);
-$stmt->execute(); 
+$stmt->execute();
+  $totalqty = 0; 
+$totalqty = $tireqty + $oilqty + $sparkqty; 
 } 
 catch(Exception $e) { 
 die(var_dump($e)); 
@@ -95,7 +97,10 @@ echo "<td>".$registrant['oilqty']."</td>";
 echo "<td>".$registrant['sparkqty']."</td>";
 echo "<td>".$registrant['adress']."</td>";
 echo "<td>".$registrant['name']."</td>";
-echo "<td>".$registrant['phone']."</td></tr>";
+echo "<td>".$registrant['phone']."</td></tr>"
+echo 'Ваш заказ: '. "$totalqty</br>"; 
+
+$totalamount = 0.00;;
 } 
 echo "</table>"; 
 } else { 
