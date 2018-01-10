@@ -61,7 +61,7 @@ $adress = $_POST['adress'];
 $name = $_POST['name'];
 $phone = $_POST['phone']; 
 $sql_insert = 
-"INSERT INTO registration_tbl (tireqty, oilqty, sparkqty, adress, name, phone) 
+"INSERT INTO registration_tov (tireqty, oilqty, sparkqty, adress, name, phone) 
 VALUES (?,?,?,?,?,?)"; 
 $stmt = $conn->prepare($sql_insert); 
 $stmt->bindValue(1, $tireqty); 
