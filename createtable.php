@@ -9,10 +9,15 @@ try {
     
     
     
+    
+    
+    
+    
+    
 $sql = "CREATE TABLE registration_too(
 id INT NOT NULL IDENTITY(1,1),
 PRIMARY KEY(id),
-tire VARCHAR(30),
+tireqty VARCHAR(30),
 oilqty VARCHAR(30),
 sparkqty VARCHAR(30),
 address VARCHAR(30),
