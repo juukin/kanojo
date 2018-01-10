@@ -29,7 +29,7 @@ to register.</p>
 <form method="post" action="index.php" 
 enctype="multipart/form-data" >
 Сыр<input type="text" 
-name="tireqty" size= "3" maxlength="3" id="tireqty"/></br>
+name="tire" size= "3" maxlength="3" id="tire"/></br>
 Масло<input type="text" 
 name="oilqty" size= "3" maxlength="3" id="oilqty"/></br>
 Майонез<input type="text" 
@@ -54,17 +54,17 @@ die(print_r($e));
 } 
 if(!empty($_POST)) { 
 try { 
-$tireqty = $_POST['tireqty']; 
+$tireqty = $_POST['tire']; 
 $oilqty = $_POST['oilqty'];
 $sparkqty = $_POST['sparkqty'];
 $adress = $_POST['adress'];
 $name = $_POST['name'];
 $phone = $_POST['phone']; 
 $sql_insert = 
-"INSERT INTO registration_tbl (tireqty, oilqty, sparkqty, adress, name, phone) 
+"INSERT INTO registration_tbl (tire, oilqty, sparkqty, adress, name, phone) 
 VALUES (?,?,?,?,?,?)"; 
 $stmt = $conn->prepare($sql_insert); 
-$stmt->bindValue(1, $tireqty); 
+$stmt->bindValue(1, $tire); 
 $stmt->bindValue(2, $oilqty); 
 $stmt->bindValue(3, $sparkqty);
 $stmt->bindValue(4, $adress);
@@ -83,14 +83,14 @@ $registrants = $stmt->fetchAll();
 if(count($registrants) > 0) { 
 echo "<h2>People who are registered:</h2>"; 
 echo "<table>"; 
-echo "<tr><th>tireqty</th>"; 
+echo "<tr><th>tire</th>"; 
 echo "<th>oilqty</th>"; 
 echo "<th>sparkqty</th>";
 echo "<th>adress</th>";
 echo "<th>name</th>";
 echo "<th>phone</th></tr>";
 foreach($registrants as $registrant) { 
-echo "<tr><td>".$registrant['tireqty']."</td>"; 
+echo "<tr><td>".$registrant['tire']."</td>"; 
 echo "<td>".$registrant['oilqty']."</td>";
 echo "<td>".$registrant['sparkqty']."</td>";
 echo "<td>".$registrant['adress']."</td>";
