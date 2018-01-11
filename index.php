@@ -97,7 +97,6 @@ name="phone" id="phone"/></br>
 	echo "<td>".$registrant['oilqty']."</td>";
 	echo "<td>".$registrant['sparkqty']."</td>";
 	echo 'Ваш заказ: '. "$totalqty</br>";
-	echo array_sum(array_column($_SESSION['products'], 'p_qty'));
 	echo "<td>".$registrant['adress']."</td>";
 	echo "<td>".$registrant['name']."</td>";
 	echo "<td>".$registrant['phone']."</td></tr>";
