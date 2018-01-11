@@ -26,20 +26,18 @@
 	<p>Fill in your name and 
 	email address, then click <strong>Submit</strong>
 	to register.</p>
-	<form method="post" action="index.php" 
-	enctype="multipart/form-data" >
-	Сыр<input type="text" 
-	name="tireqty" $tireqty = 25 id="tireqty"/></br>
-	Масло<input type="text" 
-	name="oilqty" $oilqty = 10 id="oilqty"/></br>
-	Майонез<input type="text" 
-	name="sparkqty" $sparkqty = 20 id="sparkqty"/></br>
-	adress<input type="text" 
-	name="adress" id="adress"/></br>
-	name<input type="text" 
-	name="name" id="name"/></br>
-	phone<input type="phone" 
-	name="phone" id="phone"/></br>
+	[p_id] => tireqty 
+         [p_name] => tireqty
+         [p_price] => 20
+         [p_qty] => 1
+		[p_id] => oilqty 
+         [p_name] => oilqty
+         [p_price] => 30
+         [p_qty] => 2
+		[p_id] => sparkqty
+         [p_name] => sparkqty
+         [p_price] => 25
+         [p_qty] => 3
 	<input type="submit" 
 	name="submit" value="Submit" />
 	</form>
