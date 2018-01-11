@@ -26,32 +26,21 @@
 	<p>Fill in your name and 
 	email address, then click <strong>Submit</strong>
 	to register.</p>
-	Array
-(
-    [0] => Array
-    (
-         [p_id] => 31 
-         [p_name] => Product 31
-         [p_price] => 28.80
-         [p_qty] => 2
-    )
+	<form method="post" action="index.php" 
+enctype="multipart/form-data" >
+Сыр<input type="text" 
+name="tireqty" size= "3" maxlength="3" id="tireqty"/></br>
+Масло<input type="text" 
+name="oilqty" size= "3" maxlength="3" id="oilqty"/></br>
+Майонез<input type="text" 
+name="sparkqty" size= "3" maxlength="3" id="sparkqty"/></br>
+adress<input type="text" 
+name="adress" id="adress"/></br>
+name<input type="text" 
+name="name" id="name"/></br>
+phone<input type="phone" 
+name="phone" id="phone"/></br>
 
-    [1] => Array
-    (
-         [p_id] => 46 
-         [p_name] => Product 46
-         [p_price] => 18.00
-         [p_qty] => 3
-    )
-
-    [2] => Array
-    (
-         [p_id] => 12 
-         [p_name] => Product 12
-         [p_price] => 63.00
-         [p_qty] => 1
-    )
-)
 	<input type="submit" 
 	name="submit" value="Submit" />
 	</form>
