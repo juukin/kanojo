@@ -29,11 +29,11 @@
 	<form method="post" action="index.php" 
 	enctype="multipart/form-data" >
 	Сыр<input type="text" 
-	name="tireqty"  $tireqty->get_price_html(100) size= "3" maxlength="3" id="tireqty"/></br>
+	name="tireqty" size= "3" maxlength="3" id="tireqty"/></br>
 	Масло<input type="text" 
-	name="oilqty"  $oilqty->get_price_html(50) size= "3" maxlength="3" id="oilqty"/></br>
+	name="oilqty" size= "3" maxlength="3" id="oilqty"/></br>
 	Майонез<input type="text" 
-	name="sparkqty"  $sparkqty->get_price_html(40) size= "3" maxlength="3" id="sparkqty"/></br>
+	name="sparkqty" size= "3" maxlength="3" id="sparkqty"/></br>
 	adress<input type="text" 
 	name="adress" id="adress"/></br>
 	name<input type="text" 
