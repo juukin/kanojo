@@ -29,11 +29,11 @@
 	<form method="post" action="index.php" 
 	enctype="multipart/form-data" >
 	Сыр<input type="text" 
-	name="tireqty" price = 15.00 id="tireqty"/></br>
+	name="tireqty" size= "3" maxlength="3" id="tireqty"/></br>
 	Масло<input type="text" 
-	name="oilqty" price = 30.00 id="oilqty"/></br>
+	name="oilqty" size= "3" maxlength="3" id="oilqty"/></br>
 	Майонез<input type="text" 
-	name="sparkqty" price = 20.00 id="sparkqty"/></br>
+	name="sparkqty" size= "3" maxlength="3" id="sparkqty"/></br>
 	adress<input type="text" 
 	name="adress" id="adress"/></br>
 	name<input type="text" 
@@ -98,7 +98,6 @@
 	echo 'Ваш заказ: '. "$totalqty</br>";
 	echo "<td>".$registrant['adress']."</td>";
 	echo "<td>".$registrant['name']."</td>";
-	echo "<td>" array_sum($_POST['tireqty'+'oilqty'+'sparkqty'])."</td>";
 	echo "<td>".$registrant['phone']."</td></tr>";
 	} 
 	echo "</table>"; 
@@ -108,6 +107,7 @@
 	?>
 	</body>
 	</html>
+
 
 
 
