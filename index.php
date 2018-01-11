@@ -28,20 +28,25 @@ email address, then click <strong>Submit</strong>
 to register.</p>
 <form method="post" action="index.php" 
 enctype="multipart/form-data" >
-Сыр<input type="text" 
-name="tireqty" size= "3" maxlength="3" $tireqty=200 id="tireqty"/></br>
-Масло<input type="text" 
-name="oilqty" size= "3" maxlength="3" id="oilqty"/></br>
-Майонез<input type="text" 
-name="sparkqty" size= "3" maxlength="3" id="sparkqty"/></br>
+Сыр=50<input type="text" 
+name="tireqty" $tireqty = 50 size= "3" maxlength="3" $tireqty=200 id="tireqty"/></br>
+Масло=100<input type="text" 
+name="oilqty" $oilqty = 100 size= "3" maxlength="3" id="oilqty"/></br>
+Майонез=150<input type="text" 
+name="sparkqty" $sparkqty = 150 size= "3" maxlength="3" id="sparkqty"/></br>
 adress<input type="text" 
 name="adress" id="adress"/></br>
 name<input type="text" 
 name="name" id="name"/></br>
 phone<input type="phone" 
 name="phone" id="phone"/></br>
+сумма<input type="text"
+name="summa" id="summa"/></br>
 <input type="submit" 
 name="submit" value="Submit" />
+$a=$tireqty
+$b=$oitqty
+$c=sparkqty
 </form>
 <?php
 try { 
@@ -59,10 +64,11 @@ $oilqty = $_POST['oilqty'];
 $sparkqty = $_POST['sparkqty'];
 $adress = $_POST['adress'];
 $name = $_POST['name'];
-$phone = $_POST['phone']; 
+$phone = $_POST['phone'];
+$summa = $_POST['summa']
 $sql_insert = 
-"INSERT INTO top123 (tireqty, oilqty, sparkqty, adress, name, phone) 
-VALUES (?,?,?,?,?,?)"; 
+"INSERT INTO top123 (tireqty, oilqty, sparkqty, adress, name, phone, summa) 
+VALUES (?,?,?,?,?,?,?)"; 
 $stmt = $conn->prepare($sql_insert); 
 $stmt->bindValue(1, $tireqty); 
 $stmt->bindValue(2, $oilqty); 
@@ -70,9 +76,12 @@ $stmt->bindValue(3, $sparkqty);
 $stmt->bindValue(4, $adress);
 $stmt->bindValue(5, $name);
 $stmt->bindValue(6, $phone);
+$stmt->bindValue(7, $summa)
 $stmt->execute();
  $totalqty = 0; 
 $totalqty = $tireqty + $oilqty + $sparkqty;
+ $totalqty = 0;
+ $totalqly = $a + $b +$c;
 } 
 catch(Exception $e) { 
 die(var_dump($e)); 
@@ -90,7 +99,8 @@ echo "<th>oilqty</th>";
 echo "<th>sparkqty</th>";
 echo "<th>adress</th>";
 echo "<th>name</th>";
-echo "<th>phone</th></tr>";
+echo "<th>phone</th>;
+echo "<th>summa</th></tr>;
 foreach($registrants as $registrant) { 
 echo "<tr><td>".$registrant['tireqty']."</td>"; 
 echo "<td>".$registrant['oilqty']."</td>";
@@ -98,7 +108,8 @@ echo "<td>".$registrant['sparkqty']."</td>";
 echo 'Ваш заказ: '. "$totalqty</br>";
 echo "<td>".$registrant['adress']."</td>";
 echo "<td>".$registrant['name']."</td>";
-echo "<td>".$registrant['phone']."</td></tr>";
+echo "<td>".$registrant['phone']."</td>";
+echo "<td>.$summa ['summa']."</td></tr>";
 } 
 echo "</table>"; 
 } else { 
