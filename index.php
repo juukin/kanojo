@@ -79,7 +79,7 @@ name="phone" id="phone"/></br>
 	$stmt->bindValue(6, $phone);
 	$stmt->execute();
 	 $totalqty = 0; 
-	$totalqty = $tireqty + $oilqty + $sparkqty;
+	$totalqty = $a + $b + $c;
 	} 
 	catch(Exception $e) { 
 	die(var_dump($e)); 
