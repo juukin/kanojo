@@ -29,7 +29,7 @@ to register.</p>
 <form method="post" action="index.php" 
 enctype="multipart/form-data" >
 Сыр<input type="text" 
-name="tireqty" size= "3" maxlength="3" id="tireqty"/></br>
+name="tireqty" size= "3" maxlength="3" $tireqty=200 id="tireqty"/></br>
 Масло<input type="text" 
 name="oilqty" size= "3" maxlength="3" id="oilqty"/></br>
 Майонез<input type="text" 
