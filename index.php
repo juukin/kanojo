@@ -26,18 +26,32 @@
 	<p>Fill in your name and 
 	email address, then click <strong>Submit</strong>
 	to register.</p>
-	[p_id] => tireqty 
-         [p_name] => tireqty
-         [p_price] => 20
-         [p_qty] => 1
-		[p_id] => oilqty 
-         [p_name] => oilqty
-         [p_price] => 30
+	Array
+(
+    [0] => Array
+    (
+         [p_id] => 31 
+         [p_name] => Product 31
+         [p_price] => 28.80
          [p_qty] => 2
-		[p_id] => sparkqty
-         [p_name] => sparkqty
-         [p_price] => 25
+    )
+
+    [1] => Array
+    (
+         [p_id] => 46 
+         [p_name] => Product 46
+         [p_price] => 18.00
          [p_qty] => 3
+    )
+
+    [2] => Array
+    (
+         [p_id] => 12 
+         [p_name] => Product 12
+         [p_price] => 63.00
+         [p_qty] => 1
+    )
+)
 	<input type="submit" 
 	name="submit" value="Submit" />
 	</form>
