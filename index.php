@@ -62,7 +62,6 @@
 	$adress = $_POST['adress'];
 	$name = $_POST['name'];
 	$phone = $_POST['phone'];
-	$price = $_POST['tireqty' + 'oilqty' + 'sparkqty'];
 	$sql_insert = 
 	"INSERT INTO top123 (tireqty, oilqty, sparkqty, adress, name, phone) 
 	VALUES (?,?,?,?,?,?,?)"; 
@@ -73,12 +72,9 @@
 	$stmt->bindValue(4, $adress);
 	$stmt->bindValue(5, $name);
 	$stmt->bindValue(6, $phone);
-	$stmt->blindValue(7, $price);
 	$stmt->execute();
 	 $totalqty = 0; 
 	$totalqty = $tireqty + $oilqty + $sparkqty;
-		$price = 0;
-		$price = $tireqty + $oilqty + $sparkqty;
 	} 
 	catch(Exception $e) { 
 	die(var_dump($e)); 
@@ -96,15 +92,13 @@
 	echo "<th>sparkqty</th>";
 	echo "<th>adress</th>";
 	echo "<th>name</th>";
-	echo "<th>phone</th>";
-	echo "<th>price</th></tr>";
+	echo "<th>phone</th></tr>";
 	foreach($registrants as $registrant) { 
 	echo "<tr><td>".$registrant['tireqty']."</td>"; 
 	echo "<td>".$registrant['oilqty']."</td>";
 	echo "<td>".$registrant['sparkqty']."</td>";
 	echo 'price': '. "$price</br>";
 	echo 'Ваш заказ: '. "$totalqty</br>";
-	echo 'Общая сумма заказа: '. "$price</br>";
 	echo "<td>".$registrant['adress']."</td>";
 	echo "<td>".$registrant['name']."</td>";
 	echo "<td>".$registrant['phone']."</td></tr>";
