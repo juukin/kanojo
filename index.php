@@ -29,11 +29,11 @@
 	<form method="post" action="index.php" 
 	enctype="multipart/form-data" >
 	Сыр<input type="text" 
-	name="tireqty" size= "3" maxlength="3" id="tireqty"/></br>
+	name="tireqty" size= "3" price "tireqty" = 10 maxlength="3" id="tireqty"/></br>
 	Масло<input type="text" 
-	name="oilqty" size= "3" maxlength="3" id="oilqty"/></br>
+	name="oilqty" size= "3" price "oilqty" = 5 maxlength="3" id="oilqty"/></br>
 	Майонез<input type="text" 
-	name="sparkqty" size= "3" maxlength="3" id="sparkqty"/></br>
+	name="sparkqty" size= "3" price "sparkqty" = 15 maxlength="3" id="sparkqty"/></br>
 	adress<input type="text" 
 	name="adress" id="adress"/></br>
 	name<input type="text" 
@@ -73,6 +73,8 @@
 	$stmt->execute();
 	 $totalqty = 0; 
 	$totalqty = $tireqty + $oilqty + $sparkqty;
+		$price = 0;
+		$price = $tireqty + $oilqty + $sparkqty;
 	} 
 	catch(Exception $e) { 
 	die(var_dump($e)); 
@@ -95,6 +97,7 @@
 	echo "<tr><td>".$registrant['tireqty']."</td>"; 
 	echo "<td>".$registrant['oilqty']."</td>";
 	echo "<td>".$registrant['sparkqty']."</td>";
+		echo 'price': '. "$price</br>";
 	echo 'Ваш заказ: '. "$totalqty</br>";
 	echo "<td>".$registrant['adress']."</td>";
 	echo "<td>".$registrant['name']."</td>";
