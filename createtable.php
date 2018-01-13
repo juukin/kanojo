@@ -13,7 +13,7 @@ sparkqt VARCHAR(30),
 adress VARCHAR(30),
 name VARCHAR(30),
 phone VARCHAR(30)
-sum VARCHAR(100))"; 
+price VARCHAR(100))"; 
 $conn->query($sql); 
 } 
 catch (PDOException $e) { 
