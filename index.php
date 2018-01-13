@@ -30,13 +30,13 @@
 	enctype="multipart/form-data" >
 	
 	Сыр<input type="checkbox" 
-	name="tireqty" $tireqty = 50;
+	$tireqty = 50;
 		  id="tireqty"/></br>
 	Масло<input type="checkbox" 
-	name="oilqty" $oilqty = 70;
+	$oilqty = 70;
 		    id="oilqty"/></br>
 	Майонез<input type="checkbox" 
-	name="sparkqty" $sparkqty = 100;
+	$sparkqty = 100;
 		      id="sparkqty"/></br>
 	adress<input type="text" 
 	name="adress" id="adress"/></br>
