@@ -29,16 +29,16 @@
 	<form method="post" action="index.php" 
 	enctype="multipart/form-data" >
 	Сыр<input type="text" 
-	name="tireqty" price "tireqty" = "10" id="tireqty"/></br>
+	name="tireqty" size= "3" maxlength="3" id="tireqty"/></br>
 	Масло<input type="text" 
-	name="oilqty" price "oilqty" = "5" id="oilqty"/></br>
+	name="oilqty" size= "3" maxlength="3" id="oilqty"/></br>
 	Майонез<input type="text" 
-	name="sparkqty" price "sparkqty" = "15" id="sparkqty"/></br>
+	name="sparkqty" size= "3" maxlength="3" id="sparkqty"/></br>
 	adress<input type="text" 
 	name="adress" id="adress"/></br>
 	name<input type="text" 
 	name="name" id="name"/></br>
-	phone<input type="text" 
+	phone<input type="phone" 
 	name="phone" id="phone"/></br>
 	<input type="submit" 
 	name="submit" value="Submit" />
@@ -59,10 +59,10 @@
 	$sparkqty = $_POST['sparkqty'];
 	$adress = $_POST['adress'];
 	$name = $_POST['name'];
-	$phone = $_POST['phone'];
+	$phone = $_POST['phone']; 
 	$sql_insert = 
 	"INSERT INTO top123 (tireqty, oilqty, sparkqty, adress, name, phone) 
-	VALUES (?,?,?,?,?,?,?)"; 
+	VALUES (?,?,?,?,?,?)"; 
 	$stmt = $conn->prepare($sql_insert); 
 	$stmt->bindValue(1, $tireqty); 
 	$stmt->bindValue(2, $oilqty); 
@@ -95,7 +95,6 @@
 	echo "<tr><td>".$registrant['tireqty']."</td>"; 
 	echo "<td>".$registrant['oilqty']."</td>";
 	echo "<td>".$registrant['sparkqty']."</td>";
-	echo 'price': '. "$price</br>";
 	echo 'Ваш заказ: '. "$totalqty</br>";
 	echo "<td>".$registrant['adress']."</td>";
 	echo "<td>".$registrant['name']."</td>";
@@ -108,6 +107,7 @@
 	?>
 	</body>
 	</html>
+
 
 
 
