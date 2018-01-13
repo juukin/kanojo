@@ -29,11 +29,11 @@
 	<form method="post" action="index.php" 
 	enctype="multipart/form-data" >
 	
-	Сыр<input type="case" 
+	Сыр<input type="checkbox" 
 	name="tireqty" $tireqty=50 id="tireqty"/></br>
-	Масло<input type="case" 
+	Масло<input type="checkbox" 
 	name="oilqty" $oilqty=70 id="oilqty"/></br>
-	Майонез<input type="case" 
+	Майонез<input type="checkbox" 
 	name="sparkqty" $sparkqty=100 id="sparkqty"/></br>
 	adress<input type="text" 
 	name="adress" id="adress"/></br>
