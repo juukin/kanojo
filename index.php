@@ -38,8 +38,10 @@
 	name="adress" id="adress"/></br>
 	name<input type="text" 
 	name="name" id="name"/></br>
-	phone<input type="phone" 
+	phone<input type="text" 
 	name="phone" id="phone"/></br>
+        Общая сумма<input type="text"
+			  name="price" id="price"/></br>
 	<input type="submit" 
 	name="submit" value="Submit" />
 	</form>
@@ -59,10 +61,11 @@
 	$sparkqty = $_POST['sparkqty'];
 	$adress = $_POST['adress'];
 	$name = $_POST['name'];
-	$phone = $_POST['phone']; 
+	$phone = $_POST['phone'];
+	$price = $_POST['tireqty' + 'oilqty' + 'sparkqty'];
 	$sql_insert = 
 	"INSERT INTO top123 (tireqty, oilqty, sparkqty, adress, name, phone) 
-	VALUES (?,?,?,?,?,?)"; 
+	VALUES (?,?,?,?,?,?,?)"; 
 	$stmt = $conn->prepare($sql_insert); 
 	$stmt->bindValue(1, $tireqty); 
 	$stmt->bindValue(2, $oilqty); 
@@ -70,6 +73,7 @@
 	$stmt->bindValue(4, $adress);
 	$stmt->bindValue(5, $name);
 	$stmt->bindValue(6, $phone);
+	$stmt->blindValue(7, $price);
 	$stmt->execute();
 	 $totalqty = 0; 
 	$totalqty = $tireqty + $oilqty + $sparkqty;
@@ -92,13 +96,15 @@
 	echo "<th>sparkqty</th>";
 	echo "<th>adress</th>";
 	echo "<th>name</th>";
-	echo "<th>phone</th></tr>";
+	echo "<th>phone</th>";
+	echo "<th>price</th></tr>";
 	foreach($registrants as $registrant) { 
 	echo "<tr><td>".$registrant['tireqty']."</td>"; 
 	echo "<td>".$registrant['oilqty']."</td>";
 	echo "<td>".$registrant['sparkqty']."</td>";
-		echo 'price': '. "$price</br>";
+	echo 'price': '. "$price</br>";
 	echo 'Ваш заказ: '. "$totalqty</br>";
+	echo 'Общая сумма заказа: '. "$price</br>";
 	echo "<td>".$registrant['adress']."</td>";
 	echo "<td>".$registrant['name']."</td>";
 	echo "<td>".$registrant['phone']."</td></tr>";
