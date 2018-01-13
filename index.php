@@ -40,8 +40,6 @@
 	name="name" id="name"/></br>
 	phone<input type="text" 
 	name="phone" id="phone"/></br>
-        Общая сумма<input type="text"
-			  name="price" id="price"/></br>
 	<input type="submit" 
 	name="submit" value="Submit" />
 	</form>
