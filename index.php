@@ -41,8 +41,7 @@
 	name="name" id="name"/></br>
 	phone<input type="phone" 
 	name="phone" id="phone"/></br>
-x = 0;
-x = $tireqty + $oilqty + $sparkqty;
+        $x = $tireqty + $oilqty + $sparkqty;
 	<input type="submit" 
 	name="submit" value="Submit" />
 	</form>
@@ -74,7 +73,8 @@ x = $tireqty + $oilqty + $sparkqty;
 	$stmt->bindValue(5, $name);
 	$stmt->bindValue(6, $phone);
 	$stmt->execute();
-	 $totalqty = 0; 
+	 $x = $tireqty + $oilqty + $sparkqty;
+		$totalqty = 0; 
 	$totalqty = $tireqty + $oilqty + $sparkqty;
 	} 
 	catch(Exception $e) { 
