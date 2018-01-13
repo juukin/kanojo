@@ -28,11 +28,11 @@
 	to register.</p>
 	<form method="post" action="index.php" 
 	enctype="multipart/form-data" >
-	Сыр<input type="text" 
+	Сыр<input type="case" 
 	name="tireqty" $tireqty=50 id="tireqty"/></br>
-	Масло<input type="text" 
+	Масло<input type="case" 
 	name="oilqty" $oilqty=70 id="oilqty"/></br>
-	Майонез<input type="text" 
+	Майонез<input type="case" 
 	name="sparkqty" $sparkqty=100 id="sparkqty"/></br>
 	adress<input type="text" 
 	name="adress" id="adress"/></br>
