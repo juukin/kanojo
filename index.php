@@ -28,6 +28,7 @@
 	to register.</p>
 	<form method="post" action="index.php" 
 	enctype="multipart/form-data" >
+	
 	Сыр<input type="case" 
 	name="tireqty" $tireqty=50 id="tireqty"/></br>
 	Масло<input type="case" 
@@ -40,6 +41,8 @@
 	name="name" id="name"/></br>
 	phone<input type="phone" 
 	name="phone" id="phone"/></br>
+x = 0;
+x = $tireqty + $oilqty + $sparkqty;
 	<input type="submit" 
 	name="submit" value="Submit" />
 	</form>
@@ -96,6 +99,7 @@
 	echo "<td>".$registrant['oilqty']."</td>";
 	echo "<td>".$registrant['sparkqty']."</td>";
 	echo 'Ваш заказ: '. "$totalqty</br>";
+	echo 'общая сумма: '. "$x</br>";
 	echo "<td>".$registrant['adress']."</td>";
 	echo "<td>".$registrant['name']."</td>";
 	echo "<td>".$registrant['phone']."</td></tr>";
