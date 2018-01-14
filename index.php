@@ -29,13 +29,13 @@
 	<form method="post" action="index.php" 
 	enctype="multipart/form-data" >
 	
-	Сыр<input type="checkbox" 
+	Сыр<input type="text" 
 	$tireqty = 50;
 		  id="tireqty"/></br>
-	Масло<input type="checkbox" 
+	Масло<input type="text" 
 	$oilqty = 70;
 		    id="oilqty"/></br>
-	Майонез<input type="checkbox" 
+	Майонез<input type="text" 
 	$sparkqty = 100;
 		      id="sparkqty"/></br>
 	adress<input type="text" 
@@ -47,6 +47,10 @@
         $x = $tireqty + $oilqty + $sparkqty;
 	<input type="submit" 
 	name="submit" value="Submit" />
+$a = tireqty * 50;
+$b = oilqty * 70;
+$c = sparkqty * 100;
+$v = $a + $b + $c;
 	</form>
 	<?php
 	try { 
@@ -102,7 +106,7 @@
 	echo "<td>".$registrant['oilqty']."</td>";
 	echo "<td>".$registrant['sparkqty']."</td>";
 	echo 'Ваш заказ: '. "$totalqty</br>";
-	echo 'общая сумма: '. "$x</br>";
+	echo 'общая сумма: '. "$v</br>";
 	echo "<td>".$registrant['adress']."</td>";
 	echo "<td>".$registrant['name']."</td>";
 	echo "<td>".$registrant['phone']."</td></tr>";
