@@ -28,29 +28,20 @@
 	to register.</p>
 	<form method="post" action="index.php" 
 	enctype="multipart/form-data" >
-	
 	Сыр<input type="text" 
-	$tireqty = 50;
-		  id="tireqty"/></br>
+	name="tireqty" size= "3" maxlength="3" id="tireqty"/></br>
 	Масло<input type="text" 
-	$oilqty = 70;
-		    id="oilqty"/></br>
+	name="oilqty" size= "3" maxlength="3" id="oilqty"/></br>
 	Майонез<input type="text" 
-	$sparkqty = 100;
-		      id="sparkqty"/></br>
+	name="sparkqty" size= "3" maxlength="3" id="sparkqty"/></br>
 	adress<input type="text" 
 	name="adress" id="adress"/></br>
 	name<input type="text" 
 	name="name" id="name"/></br>
 	phone<input type="phone" 
 	name="phone" id="phone"/></br>
-        $x = $tireqty + $oilqty + $sparkqty;
 	<input type="submit" 
 	name="submit" value="Submit" />
-$a = tireqty * 50;
-$b = oilqty * 70;
-$c = sparkqty * 100;
-$v = $a + $b + $c;
 	</form>
 	<?php
 	try { 
@@ -80,8 +71,7 @@ $v = $a + $b + $c;
 	$stmt->bindValue(5, $name);
 	$stmt->bindValue(6, $phone);
 	$stmt->execute();
-	 $x = $tireqty + $oilqty + $sparkqty;
-		$totalqty = 0; 
+	 $totalqty = 0; 
 	$totalqty = $tireqty + $oilqty + $sparkqty;
 	} 
 	catch(Exception $e) { 
@@ -106,7 +96,6 @@ $v = $a + $b + $c;
 	echo "<td>".$registrant['oilqty']."</td>";
 	echo "<td>".$registrant['sparkqty']."</td>";
 	echo 'Ваш заказ: '. "$totalqty</br>";
-	echo 'общая сумма: '. "$v</br>";
 	echo "<td>".$registrant['adress']."</td>";
 	echo "<td>".$registrant['name']."</td>";
 	echo "<td>".$registrant['phone']."</td></tr>";
@@ -118,6 +107,7 @@ $v = $a + $b + $c;
 	?>
 	</body>
 	</html>
+
 
 
 
