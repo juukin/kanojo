@@ -39,7 +39,7 @@
 	Телефон<input type="phone" 
 	name="phone" id="phone"/></br>
 	<input type="submit" 
-	name="Оформить заказ" value="Submit" />
+	name="Оформить заказ" value="оформить заказ" />
 	</form>
 	<?php
 	try { 
