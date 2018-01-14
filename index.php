@@ -61,7 +61,7 @@
 	$name = $_POST['name'];
 	$phone = $_POST['phone']; 
 	$sql_insert = 
-	"INSERT INTO top (tireqty, oilqty, sparkqty, adress, name, phone) 
+	"INSERT INTO top123 (tireqty, oilqty, sparkqty, adress, name, phone) 
 	VALUES (?,?,?,?,?,?)"; 
 	$stmt = $conn->prepare($sql_insert); 
 	$stmt->bindValue(1, $tireqty); 
@@ -80,7 +80,7 @@
 	} 
 	echo "<h3>Your're registered!</h3>"; 
 	} 
-	$sql_select = "SELECT * FROM top"; 
+	$sql_select = "SELECT * FROM top123"; 
 	$stmt = $conn->query($sql_select); 
 	$registrants = $stmt->fetchAll(); 
 	if(count($registrants) > 0) { 
