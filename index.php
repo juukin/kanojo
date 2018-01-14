@@ -23,9 +23,7 @@
 	</head>
 	<body>
 	<h1>Register here!</h1>
-	<p>Fill in your name and 
-	email address, then click <strong>Submit</strong>
-	to register.</p>
+	<p>Выберите товар, введите ваш адрес, ваше имя, телефон и нажмите кнопку <strong>оформить заказ</strong></p>
 	<form method="post" action="index.php" 
 	enctype="multipart/form-data" >
 	Сыр 50 рублей<input type="text" 
@@ -34,14 +32,14 @@
 	name="oilqty" size= "3" maxlength="3" id="oilqty"/></br>
 	Майонез 100 рублей<input type="text" 
 	name="sparkqty" size= "3" maxlength="3" id="sparkqty"/></br>
-	adress<input type="text" 
+	Адрес<input type="text" 
 	name="adress" id="adress"/></br>
-	name<input type="text" 
+	Имя<input type="text" 
 	name="name" id="name"/></br>
-	phone<input type="phone" 
+	Телефон<input type="phone" 
 	name="phone" id="phone"/></br>
 	<input type="submit" 
-	name="submit" value="Submit" />
+	name="Оформить заказ" value="Submit" />
 	</form>
 	<?php
 	try { 
