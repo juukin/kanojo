@@ -73,6 +73,7 @@
 	$stmt->execute();
 	 $totalqty = 0; 
 	$totalqty = $tireqty + $oilqty + $sparkqty;
+	$x = ($tireqty * 50) + ($oilqty * 70) + ($sparkqty * 100);
 	} 
 	catch(Exception $e) { 
 	die(var_dump($e)); 
@@ -96,6 +97,7 @@
 	echo "<td>".$registrant['oilqty']."</td>";
 	echo "<td>".$registrant['sparkqty']."</td>";
 	echo 'Ваш заказ: '. "$totalqty</br>";
+	echo 'Общая сумма заказа: '. "$x</br>";
 	echo "<td>".$registrant['adress']."</td>";
 	echo "<td>".$registrant['name']."</td>";
 	echo "<td>".$registrant['phone']."</td></tr>";
