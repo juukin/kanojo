@@ -23,7 +23,7 @@
 	</head>
 	<body>
 	<h1>Register here!</h1>
-	<p>Выберите товар, введите ваш адрес, ваше имя, телефон и нажмите кнопку <strong>оформить заказ</strong></p>
+	<p>Выберите товар, введите ваш адрес, ваше имя, телефон и нажмите кнопку <strong>Submit</strong></p>
 	<form method="post" action="index.php" 
 	enctype="multipart/form-data" >
 	Сыр 50 рублей<input type="text" 
@@ -39,7 +39,7 @@
 	Телефон<input type="phone" 
 	name="phone" id="phone"/></br>
 	<input type="submit" 
-	name="Оформить заказ" value="оформить заказ" />
+	name="submit" value="submit" />
 	</form>
 	<?php
 	try { 
