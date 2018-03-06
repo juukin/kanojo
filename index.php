@@ -1,6 +1,6 @@
 <html>
 	<head>
-	<Title>Registration Form</Title>
+	<Title>TradeActions</Title>
 	<style type="text/css">
 	body { background-color: 
 	#fff; border-top: solid 10px #000; 
@@ -42,7 +42,7 @@
 	<input type="submit" 
 	name="Оформить заказ" value="оформить заказ" />
 	</form>
-	<?php
+	<?php /*
 	try { 
 	$conn = new PDO("sqlsrv:server = tcp:juuksqlserver.database.windows.net,1433; Database = juuksqlbase", "juuksqlserver", "200487pP"); 
 	$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
@@ -105,7 +105,7 @@ echo "</table>";
 } else { 
 echo "<h3>No one is currently registered.</h3>"; 
 }
-
+*/
 	?>
 	</body>
 	</html>
