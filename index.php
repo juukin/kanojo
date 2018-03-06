@@ -24,7 +24,7 @@
 	<body>
 	<body style="background-image: https://sepimages.ru/uploads/images/f/o/t/foto_krasivogo_fona.jpg>"
 	<h1>Register here!</h1>
-	<p>Выберите товар, введите ваш адрес, ваше имя, телефон и нажмите кнопку <strong>Оформить заказ</strong></p>
+	<p>Выполните вход или регистрацию</p>
 	<form method="post" action="index.php" 
 	enctype="multipart/form-data" >
 	Сыр 50 рублей<input type="text" 
@@ -37,6 +37,8 @@
 	name="adress" id="adress"/></br>
 	Имя<input type="text" 
 	name="name" id="name"/></br>
+Вход <input type="submit">
+Регистрация <input type="submit">
 	Телефон<input type="phone" 
 	name="phone" id="phone"/></br>
 	<input type="submit" 
