@@ -23,7 +23,7 @@
 	</head>
 	<body>
 	<body style="background-image: https://sepimages.ru/uploads/images/f/o/t/foto_krasivogo_fona.jpg>"
-	<h1>Register here!</h1>
+	<h1>Добро пожаловать в Trade Actions!</h1>
 	<p>Выполните вход или регистрацию</p>
 	<form method="post" action="index.php" 
 	enctype="multipart/form-data" >
