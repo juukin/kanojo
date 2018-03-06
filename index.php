@@ -37,9 +37,9 @@
 	name="adress" id="adress"/></br>
 	Имя<input type="text" 
 	name="name" id="name"/></br>
-<input type="submit" value="Вход" 
+        <input type="submit" value="Вход" 
 	name="Вход">
-<input type="submit" value="регистрация">
+        <input type="submit" value="регистрация">
 	name="Регистрация">
 	Телефон<input type="phone" 
 	name="phone" id="phone"/></br>
