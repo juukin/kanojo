@@ -22,7 +22,7 @@
 	</style>
 	</head>
 	<body>
-	<body style=”background-image: urlhttps://sepimages.ru/uploads/images/f/o/t/foto_krasivogo_fona.jpg”>
+	<body style=”background-image: https://sepimages.ru/uploads/images/f/o/t/foto_krasivogo_fona.jpg>
 	<h1>Register here!</h1>
 	<p>Выберите товар, введите ваш адрес, ваше имя, телефон и нажмите кнопку <strong>Оформить заказ</strong></p>
 	<form method="post" action="index.php" 
