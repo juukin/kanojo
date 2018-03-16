@@ -46,7 +46,10 @@
 	<input type="submit" 
 	name="Оформить заказ" value="оформить заказ" />
 	</form>
-	<?php /*
+	<?php
+	echo rand() . "\n";
+	echo rand() . "\n";
+	echo rand(5, 15);
 	try { 
 	$conn = new PDO("sqlsrv:server = tcp:juuksqlserver.database.windows.net,1433; Database = juuksqlbase", "juuksqlserver", "200487pP"); 
 	$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
@@ -109,7 +112,7 @@ echo "</table>";
 } else { 
 echo "<h3>No one is currently registered.</h3>"; 
 }
-*/
+
 	?>
 	</body>
 	</html>
