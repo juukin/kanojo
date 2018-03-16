@@ -47,9 +47,6 @@
 	name="Оформить заказ" value="оформить заказ" />
 	</form>
 	<?php
-	echo rand() . "\n";
-	echo rand() . "\n";
-	echo rand(5, 15);
 	try { 
 	$conn = new PDO("sqlsrv:server = tcp:juuksqlserver.database.windows.net,1433; Database = juuksqlbase", "juuksqlserver", "200487pP"); 
 	$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
@@ -107,6 +104,9 @@ echo 'Общая сумма заказа: '. "$x</br>";
 echo "<td>".$registrant['adress']."</td>";
 echo "<td>".$registrant['name']."</td>";
 echo "<td>".$registrant['phone']."</td></tr>";
+	echo rand() . "\n";
+	echo rand() . "\n";
+	echo rand(5, 15);
 } 
 echo "</table>"; 
 } else { 
