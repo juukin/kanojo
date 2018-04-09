@@ -27,25 +27,16 @@
 	<p>Выполните вход или регистрацию</p>
 	<form method="post" action="index.php" 
 	enctype="multipart/form-data" >
-	Сыр 50 рублей<input type="text" 
-	name="tireqty" size= "3" maxlength="3" id="tireqty"/></br>
-	Масло 70 рублей<input type="text" 
-	name="oilqty" size= "3" maxlength="3" id="oilqty"/></br>
-	Майонез 100 рублей<input type="text" 
-	name="sparkqty" size= "3" maxlength="3" id="sparkqty"/></br>
-	Адрес<input type="text" 
-	name="adress" id="adress"/></br>
-	Имя<input type="text" 
-	name="name" id="name"/></br>
-        <input type="submit" value="Вход" 
-	name="Вход">
-        <input type="submit" value="регистрация"
-	name="Регистрация">
-	Телефон<input type="phone" 
-	name="phone" id="phone"/></br>
-	<input type="submit" 
-	name="Оформить заказ" value="оформить заказ" />
-	</form>
+	Ваш баланс: <name = "balance"> <br>
+        <label form = "stock1">Акция 1</label>
+        <input type = "text" name = "stock1" id = "stock1"> <input type = "submit" value = "Купить" name = "buy1"> <input type = "submit" value = "Продать" name = "sell1"> <br>
+        <label form = "stock2">Акция 2</label>
+        <input type = "text" name = "stock2" id = "stock2"> <input type = "submit" value = "Купить" name = "buy2"> <input type = "submit" value = "Продать" name = "sell2"> <br>
+        <label form = "stock3">Акция 3</label>
+        <input type = "text" name = "stock3" id = "stock3"> <input type = "submit" value = "Купить" name = "buy3"> <input type = "submit" value = "Продать" name = "sell3"> <br>
+        <label form = "stock4">Акция 4</label>
+        <input type = "text" name = "stock4" id = "stock4"> <input type = "submit" value = "Купить" name = "buy4"> <input type = "submit" value = "Продать" name = "sell4"> <br>
+        </form>
 	<?php
 	try { 
 	$conn = new PDO("sqlsrv:server = tcp:juuksqlserver.database.windows.net,1433; Database = juuksqlbase", "juuksqlserver", "200487pP"); 
