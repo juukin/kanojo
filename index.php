@@ -22,12 +22,11 @@
 	</style>
 	</head>
 	<body>
-	<body style="background-image: https://sepimages.ru/uploads/images/f/o/t/foto_krasivogo_fona.jpg>"
 	<h1>Добро пожаловать в Trade Actions!</h1>
-	<p>Выполните вход или регистрацию</p>
+	<p>Главная страница</p>
 	<form method="post" action="index.php" 
 	enctype="multipart/form-data" >
-	Ваш баланс: <name = "balance"> <br>
+	<input type = "submit" value = "показать баланс" name = "balance"> <br>
         <label form = "stock1">Акция 1</label>
         <input type = "text" name = "stock1" id = "stock1"> <input type = "submit" value = "Купить" name = "buy1"> <input type = "submit" value = "Продать" name = "sell1"> <br>
         <label form = "stock2">Акция 2</label>
