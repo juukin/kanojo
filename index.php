@@ -47,12 +47,19 @@
 	} 
 	if(!empty($_POST)) { 
 	try { 
-	$tireqty = $_POST['tireqty']; 
-	$oilqty = $_POST['oilqty'];
-	$sparkqty = $_POST['sparkqty'];
-	$adress = $_POST['adress'];
-	$name = $_POST['name'];
-	$phone = $_POST['phone']; 
+	$balance = $_POST['balance']; 
+	$stock1 = $_POST['stock1'];
+	$stock2 = $_POST['stock2'];
+	$stock3 = $_POST['stock3'];
+	$stock4 = $_POST['stock'];
+	$buy1 = $_POST['buy1'];
+	$buy1 = $_POST['buy1'];
+	$buy1 = $_POST['buy1'];
+	$buy1 = $_POST['buy1'];
+	$sell1 = $_POST['sell1'];
+	$sell2 = $_POST['sell2'];
+	$sell3 = $_POST['sell3'];
+	$sell4 = $_POST['sell4'];
 	$sql_insert = 
 	"INSERT INTO top123 (tireqty, oilqty, sparkqty, adress, name, phone) 
 	VALUES (?,?,?,?,?,?)"; 
