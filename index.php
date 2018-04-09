@@ -27,13 +27,13 @@
 	<form method="post" action="index.php" 
 	enctype="multipart/form-data" >
 	<input type = "submit" value = "показать баланс" name = "balance"> <br>
-        <label form = "stock1">Акция 1</label>
+        <label form = "stock1">Microsoft stock = 164€</label>
         <input type = "text" name = "stock1" id = "stock1"> <input type = "submit" value = "Купить" name = "buy1"> <input type = "submit" value = "Продать" name = "sell1"> <br>
-        <label form = "stock2">Акция 2</label>
+        <label form = "stock2">Apple stock = 150€</label>
         <input type = "text" name = "stock2" id = "stock2"> <input type = "submit" value = "Купить" name = "buy2"> <input type = "submit" value = "Продать" name = "sell2"> <br>
-        <label form = "stock3">Акция 3</label>
+        <label form = "stock3">Samsung stock = 78€</label>
         <input type = "text" name = "stock3" id = "stock3"> <input type = "submit" value = "Купить" name = "buy3"> <input type = "submit" value = "Продать" name = "sell3"> <br>
-        <label form = "stock4">Акция 4</label>
+        <label form = "stock4">LG stock = 44€</label>
         <input type = "text" name = "stock4" id = "stock4"> <input type = "submit" value = "Купить" name = "buy4"> <input type = "submit" value = "Продать" name = "sell4"> <br>
         </form>
 	<?php
