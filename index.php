@@ -11,13 +11,13 @@
     <form method="POST">
     Ваш баланс: <name = "balance"> <br>
         <label form = "stock1">Акция 1</label>
-        <input type = "text" name = "stock1" id = "stock1">
+        <input type = "text" name = "stock1" id = "stock1"><br>
         <label form = "stock2">Акция 2</label>
-        <input type = "text" name = "stock2" id = "stock2">
+        <input type = "text" name = "stock2" id = "stock2"><br>
         <label form = "stock3">Акция 3</label>
-        <input type = "text" name = "stock3" id = "stock3">
+        <input type = "text" name = "stock3" id = "stock3"><br>
         <label form = "stock4">Акция 4</label>
-        <input type = "text" name = "stock4" id = "stock4">
+        <input type = "text" name = "stock4" id = "stock4"><br>
         <input type = "submit" value = "Купить" name = "buy">
 	</form>
 	<?php
