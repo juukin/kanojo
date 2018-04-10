@@ -68,6 +68,7 @@
 	 $totalstock = 0; 
 	$totalstock = $stock1 + $stock2 + $stock3 + $stock4;
 	$x = ($stock1 * 164) + ($stock2 * 150) + ($stock3 * 78) + ($stock4 * 44);
+	$balance = 10000;
 	$stock1 = 164;
 	$stock2 = 150;
 	$stock3 = 78;
