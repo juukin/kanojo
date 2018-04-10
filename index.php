@@ -48,7 +48,7 @@
 	} 
 	if(!empty($_POST)) { 
 	try { 
-	$balance = $_POST['balance']; 
+	 
 	$stock1 = $_POST['stock1'];
 	$stock2 = $_POST['stock2'];
 	$stock3 = $_POST['stock3'];
