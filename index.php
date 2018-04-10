@@ -54,6 +54,18 @@
 	$stock3 = $_POST['stock3'];
 	$stock4 = $_POST['stock'];
 	$buy1 = $_POST['buy1'];
+	$totalstock = 0; 
+	$totalstock = $stock1 + $stock2 + $stock3 + $stock4;
+	$x = ($stock1 * 164) + ($stock2 * 150) + ($stock3 * 78) + ($stock4 * 44);
+	$balance = 10000;
+	$stock1 = 164;
+	$stock2 = 150;
+	$stock3 = 78;
+	$stock4 = 44;
+		if( isset( $_POST['buy1'] ) )
+    {
+       
+        echo 'Кнопка нажата!';
 	$sql_insert = 
 	"INSERT INTO top123 (tireqty, oilqty, sparkqty, adress, name, phone) 
 	VALUES (?,?,?,?,?,?)"; 
@@ -65,14 +77,7 @@
 	$stmt->bindValue(5, $name);
 	$stmt->bindValue(6, $phone);
 	$stmt->execute();
-	 $totalstock = 0; 
-	$totalstock = $stock1 + $stock2 + $stock3 + $stock4;
-	$x = ($stock1 * 164) + ($stock2 * 150) + ($stock3 * 78) + ($stock4 * 44);
-	$balance = 10000;
-	$stock1 = 164;
-	$stock2 = 150;
-	$stock3 = 78;
-	$stock4 = 44;
+	 
 		
 	catch(Exception $e) { 
 	die(var_dump($e)); 
