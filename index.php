@@ -49,23 +49,6 @@
 	if(!empty($_POST)) { 
 	try { 
 	 
-	$stock1 = $_POST['stock1'];
-	$stock2 = $_POST['stock2'];
-	$stock3 = $_POST['stock3'];
-	$stock4 = $_POST['stock'];
-	$buy1 = $_POST['buy1'];
-	$totalstock = 0; 
-	$totalstock = $stock1 + $stock2 + $stock3 + $stock4;
-	$x = ($stock1 * 164) + ($stock2 * 150) + ($stock3 * 78) + ($stock4 * 44);
-	$balance = 10000;
-	$stock1 = 164;
-	$stock2 = 150;
-	$stock3 = 78;
-	$stock4 = 44;
-		if( isset( $_POST['buy1'] ) )
-    {
-       
-        echo 'Кнопка нажата!';
 	
 	?>
 	</body>
