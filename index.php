@@ -28,13 +28,14 @@
 	enctype="multipart/form-data" >
 	<input type = "submit" value = "показать баланс" name = "balance"> <br>
         <label form = "stock1">Microsoft stock = 164€</label>
-        <input type = "text" name = "stock1" id = "stock1"> <input type = "submit" value = "Купить" name = "buy1"> <input type = "submit" value = "Продать" name = "sell1"> <br>
+        <input type = "text" name = "stock1" id = "stock1">
         <label form = "stock2">Apple stock = 150€</label>
-        <input type = "text" name = "stock2" id = "stock2"> <input type = "submit" value = "Купить" name = "buy2"> <input type = "submit" value = "Продать" name = "sell2"> <br>
+        <input type = "text" name = "stock2" id = "stock2">
         <label form = "stock3">Samsung stock = 78€</label>
-        <input type = "text" name = "stock3" id = "stock3"> <input type = "submit" value = "Купить" name = "buy3"> <input type = "submit" value = "Продать" name = "sell3"> <br>
+        <input type = "text" name = "stock3" id = "stock3">
         <label form = "stock4">LG stock = 44€</label>
-        <input type = "text" name = "stock4" id = "stock4"> <input type = "submit" value = "Купить" name = "buy4"> <input type = "submit" value = "Продать" name = "sell4"> <br>
+        <input type = "text" name = "stock4" id = "stock4">
+	<input type = "submit" value = "Купить" name = "buy1">
         </form>
 	<?php
 	try { 
@@ -53,13 +54,6 @@
 	$stock3 = $_POST['stock3'];
 	$stock4 = $_POST['stock'];
 	$buy1 = $_POST['buy1'];
-	$buy1 = $_POST['buy1'];
-	$buy1 = $_POST['buy1'];
-	$buy1 = $_POST['buy1'];
-	$sell1 = $_POST['sell1'];
-	$sell2 = $_POST['sell2'];
-	$sell3 = $_POST['sell3'];
-	$sell4 = $_POST['sell4'];
 	$sql_insert = 
 	"INSERT INTO top123 (tireqty, oilqty, sparkqty, adress, name, phone) 
 	VALUES (?,?,?,?,?,?)"; 
@@ -71,9 +65,17 @@
 	$stmt->bindValue(5, $name);
 	$stmt->bindValue(6, $phone);
 	$stmt->execute();
-	 $totalqty = 0; 
-	$totalqty = $tireqty + $oilqty + $sparkqty;
-	$x = ($tireqty * 50) + ($oilqty * 70) + ($sparkqty * 100);
+	 $totalstock = 0; 
+	$totalstock = $stock1 + $stock2 + $stock3 + $stock4;
+	$x = ($stock1 * 164) + ($stock2 * 150) + ($stock3 * 78) + ($stock4 * 44);
+	$stock1 = 164;
+	$stock2 = 150;
+	$stock3 = 78;
+	$stock4 = 44;
+		if( isset( $_POST['buy1'] ) )
+    {
+       
+        echo "$balance + $x";
 	} 
 	catch(Exception $e) { 
 	die(var_dump($e)); 
