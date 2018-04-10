@@ -43,7 +43,7 @@
 	    if( isset( $_POST['balance'] ) )
     {
        
-        echo "Ваш баланс: $balance;
+        echo "Ваш баланс: $balance";
  }
 	
 		     
