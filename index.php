@@ -36,7 +36,7 @@
 	    if( isset( $_POST['balance'] ) )
     {
        
-        echo 'Кнопка нажата!';
+        echo '$balance';
  }
 	
 	?>
