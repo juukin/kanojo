@@ -33,6 +33,11 @@
 	$phone = $_POST['buy'];
 	
 	$balance = 40000;
+	    if( isset( $_POST['balance'] ) )
+    {
+       
+        echo 'Кнопка нажата!';
+ }
 	    
 	if( isset( $_POST['buy'] ) )
     {
