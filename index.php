@@ -21,9 +21,6 @@
         <input type = "submit" value = "Купить" name = "buy">
 	</form>
 	<?php
-	try { 
-	$conn = new PDO("sqlsrv:server = tcp:juuksqlserver.database.windows.net,1433; Database = juuksqlbase", "juuksqlserver", "200487pP"); 
-	$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
 	
 	$tireqty = $_POST['tireqty']; 
 	$oilqty = $_POST['oilqty'];
