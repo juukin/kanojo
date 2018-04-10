@@ -83,35 +83,6 @@
 	} 
 	echo "<h3>Your're registered!</h3>"; 
 	}
-$sql_select = "SELECT * FROM top123"; 
-$stmt = $conn->query($sql_select); 
-$registrants = $stmt->fetchAll(); 
-if(count($registrants) > 0) { 
-echo "<h2>People who are registered:</h2>"; 
-echo "<table>"; 
-echo "<tr><th>tireqty</th>"; 
-echo "<th>oilqty</th>"; 
-echo "<th>sparkqty</th>";
-echo "<th>adress</th>";
-echo "<th>name</th>";
-echo "<th>phone</th></tr>";
-foreach($registrants as $registrant) { 
-echo "<tr><td>".$registrant['tireqty']."</td>"; 
-echo "<td>".$registrant['oilqty']."</td>";
-echo "<td>".$registrant['sparkqty']."</td>";
-echo 'Ваш заказ: '. "$totalqty</br>";
-echo 'Общая сумма заказа: '. "$x</br>";
-echo "<td>".$registrant['adress']."</td>";
-echo "<td>".$registrant['name']."</td>";
-echo "<td>".$registrant['phone']."</td></tr>";
-	echo rand() . "\n";
-	echo rand() . "\n";
-	echo rand(5, 15);
-} 
-echo "</table>"; 
-} else { 
-echo "<h3>No one is currently registered.</h3>"; 
-}
 
 	?>
 	</body>
