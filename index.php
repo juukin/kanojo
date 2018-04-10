@@ -34,7 +34,7 @@
 	
 	$balance = 40000;
 	$totalst = 0; 
-	$totalst = $stock1 + $stock2 + $stock3 + $stock4;
+	$totalst = ($stock1 * 288) + ($stock2 * 155) + ($stock3 * 201) + ($stock4 * 155);
 	$x = ($stock1 * 288) + ($stock2 * 155) + ($stock3 * 201) + ($stock4 * 155) - $balance;
 	    if( isset( $_POST['balance'] ) )
     {
@@ -43,7 +43,7 @@
  }
 	    if( isset( $_POST['buy'] ) )
     {
-	echo "Сумма сделки составила: $totalst";
+	echo <th>"Сумма сделки составила: $totalst"</th>;
        
         echo "Ваш баланс: $x";
  }
