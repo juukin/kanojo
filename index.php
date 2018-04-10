@@ -9,7 +9,7 @@
      Главная страница</h3></centre>
        
     <form method="POST">
-    Ваш баланс: <name = "balance"> <br>
+    	<input type = "submit" value = "Показать баланс" name = "balance">
         <label form = "stock1">Акции Apple 288€ за шт.</label>
         <input type = "text" name = "stock1" id = "stock1"><br>
         <label form = "stock2">Акции Sony 155€ за шт.</label>
@@ -19,15 +19,18 @@
         <label form = "stock4">Акции Tesla 115€ за шт.</label>
         <input type = "text" name = "stock4" id = "stock4"><br>
         <input type = "submit" value = "Купить" name = "buy">
+	<form>
+<input type="button" value="Перейти в личный кабинет" onClick='location.href="1.php"'>
+</form>
 	</form>
 	<?php
 	
-	$tireqty = $_POST['tireqty']; 
-	$oilqty = $_POST['oilqty'];
-	$sparkqty = $_POST['sparkqty'];
-	$adress = $_POST['adress'];
-	$name = $_POST['name'];
-	$phone = $_POST['phone']; 
+	$stock1 = $_POST['stock1']; 
+	$stock2 = $_POST['stock2'];
+	$stock3 = $_POST['stock3'];
+	$stock4 = $_POST['stock4'];
+	$balance = $_POST['balance'];
+	$phone = $_POST['buy']; 
 	
 	?>
 	</body>
