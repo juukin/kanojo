@@ -35,7 +35,7 @@
 	$balance = 40000;
 	$totalst = 0; 
 	$totalst = ($s1 + $s2 + $s3 + $s4) - $balance;
-	$st = ($s1 * 288) + ($s2 * 155) + ($s3 * 201) + ($s4 * 115);
+	$x = ($stock1 * 288) + ($stock2 * 155) + ($stock3 * 201) + ($stock4 * 155) - $balance;
 	    if( isset( $_POST['balance'] ) )
     {
        
@@ -44,7 +44,7 @@
 	    if( isset( $_POST['buy'] ) )
     {
        
-        echo "Сделка прошла успешно! Ваш баланс: $st";
+        echo "Сделка прошла успешно! Ваш баланс: $x";
  }
 	
 		     
