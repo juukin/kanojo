@@ -24,13 +24,7 @@
 	try { 
 	$conn = new PDO("sqlsrv:server = tcp:juuksqlserver.database.windows.net,1433; Database = juuksqlbase", "juuksqlserver", "200487pP"); 
 	$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
-	} 
-	catch (PDOException $e) { 
-	print("Error connecting to SQL Server."); 
-	die(print_r($e)); 
-	} 
-	if(!empty($_POST)) { 
-	try { 
+	
 	$tireqty = $_POST['tireqty']; 
 	$oilqty = $_POST['oilqty'];
 	$sparkqty = $_POST['sparkqty'];
