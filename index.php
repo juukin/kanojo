@@ -30,7 +30,15 @@
 	$stock3 = $_POST['stock3'];
 	$stock4 = $_POST['stock4'];
 	$balance = $_POST['balance'];
-	$phone = $_POST['buy']; 
+	$phone = $_POST['buy'];
+	
+	$balance = 40000;
+	    
+	if( isset( $_POST['buy'] ) )
+    {
+       
+        echo ($balance)';
+ }
 	
 	?>
 	</body>
