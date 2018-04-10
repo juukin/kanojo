@@ -43,7 +43,7 @@
  }
 	    if( isset( $_POST['buy'] ) )
     {
-	echo <th>"Сумма сделки составила: $totalst"</th>;
+	echo "Сумма сделки составила: $totalst";
        
         echo "Ваш баланс: $x";
  }
