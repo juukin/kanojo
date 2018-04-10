@@ -38,12 +38,6 @@
        
         echo 'Кнопка нажата!';
  }
-	    
-	if( isset( $_POST['buy'] ) )
-    {
-       
-        echo ($balance)';
- }
 	
 	?>
 	</body>
