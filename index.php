@@ -40,11 +40,7 @@
 	$totalst = 0; 
 	$totalst = $s1 + $s2 + $s3 + $s4;
 	$st = ($s1 * 288) + ($s2 * 155) + ($s3 * 201) + ($s4 * 115) - ($balance)
-	    if( isset( $_POST['balance'] ) )
-    {
-       
-        echo "Ваш баланс: $balance";
- }
+	
 		     
 	?>
 	</body>
