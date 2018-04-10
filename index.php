@@ -1,50 +1,24 @@
 <html>
-	<head>
-	<Title>TradeActions</Title>
-	<style type="text/css">
-	body { background-color: 
-	#fff; border-top: solid 10px #000; 
-	color: #333; font-size: .85em; 
-	margin: 20; padding: 20; 
-	font-family: "Segoe UI", 
-	Verdana, Helvetica, Sans-Serif; 
-	} 
-	h1, h2, h3,{ color: #000; 
-	margin-bottom: 0; padding-bottom: 0; } 
-	h1 { font-size: 2em; } 
-	h2 { font-size: 1.75em; } 
-	h3 { font-size: 1.2em; } 
-	table { margin-top: 0.75em; } 
-	th { font-size: 1.2em; 
-	text-align: left; border: none; padding-left: 0; } 
-	td { padding: 0.25em 2em 0.25em 0em; 
-	border: 0 none; } 
-	</style>
-	</head>
-	<body>
-	<body style="background-image: https://sepimages.ru/uploads/images/f/o/t/foto_krasivogo_fona.jpg>"
-	<h1>Добро пожаловать в Trade Actions!</h1>
-	<p>Выполните вход или регистрацию</p>
-	<form method="post" action="index.php" 
-	enctype="multipart/form-data" >
-	Сыр 50 рублей<input type="text" 
-	name="tireqty" size= "3" maxlength="3" id="tireqty"/></br>
-	Масло 70 рублей<input type="text" 
-	name="oilqty" size= "3" maxlength="3" id="oilqty"/></br>
-	Майонез 100 рублей<input type="text" 
-	name="sparkqty" size= "3" maxlength="3" id="sparkqty"/></br>
-	Адрес<input type="text" 
-	name="adress" id="adress"/></br>
-	Имя<input type="text" 
-	name="name" id="name"/></br>
-        <input type="submit" value="Вход" 
-	name="Вход">
-        <input type="submit" value="регистрация"
-	name="Регистрация">
-	Телефон<input type="phone" 
-	name="phone" id="phone"/></br>
-	<input type="submit" 
-	name="Оформить заказ" value="оформить заказ" />
+<head>
+    <meta charset="itf-8">
+    Главная страница
+    </head>
+    <body>
+        Finance Trade
+    <centre><h3>
+     Главная страница</h3></centre>
+       
+    <form method="POST">
+    Ваш баланс: <name = "balance"> <br>
+        <label form = "stock1">Акция 1</label>
+        <input type = "text" name = "stock1" id = "stock1">
+        <label form = "stock2">Акция 2</label>
+        <input type = "text" name = "stock2" id = "stock2">
+        <label form = "stock3">Акция 3</label>
+        <input type = "text" name = "stock3" id = "stock3">
+        <label form = "stock4">Акция 4</label>
+        <input type = "text" name = "stock4" id = "stock4">
+        <input type = "submit" value = "Купить" name = "buy">
 	</form>
 	<?php
 	try { 
