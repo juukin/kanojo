@@ -9,7 +9,7 @@
      Главная страница</h3></centre>
        
     <form method="POST">
-    	<input type = "submit" value = "Показать баланс" name = "balance">
+    	<input type = "submit" value = "Показать баланс" name = "balance"><br>
         <label form = "stock1">Акции Apple 288€ за шт.</label>
         <input type = "text" name = "stock1" id = "stock1"><br>
         <label form = "stock2">Акции Sony 155€ за шт.</label>
@@ -20,7 +20,7 @@
         <input type = "text" name = "stock4" id = "stock4"><br>
         <input type = "submit" value = "Купить" name = "buy">
 	<form>
-<input type="button" value="Перейти в личный кабинет" onClick='location.href="1.php"'>
+<input type="button" value="Перейти в личный кабинет" onClick='location.href="1.php"'><br>
 </form>
 	</form>
 	<?php
