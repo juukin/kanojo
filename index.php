@@ -36,16 +36,7 @@ die(print_r($e));
 $sql_select = "SELECT * FROM stock_tbl"; 
 $stmt = $conn->query($sql_select); 
 if(isset($_POST["submit"])) { 
-if ($stmt->fetchColumn() > 0) { 
-foreach ($n as $row) { 
-session_start(); 
-$_SESSION['familiya'] = $row["familiya"]; 
-$_SESSION['imya'] = $row["imya"]; 
-$_SESSION['otchestvo'] = $row["otchestvo"]; 
-$_SESSION['tel'] = $row["tel"]; 
-} 
-} 
-} 
+
 	$stock1 = $_POST['stock1']; 
 	$stock2 = $_POST['stock2'];
 	$stock3 = $_POST['stock3'];
