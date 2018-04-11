@@ -10,14 +10,11 @@ Lname VARCHAR(30),
 Login VARCHAR(30), 
 Password VARCHAR(30), 
 Otvet VARCHAR(30), 
-srok INT, 
-sum INT, 
 Balance VARCHAR(30), 
 stock1 VARCHAR(30), 
 stock2 VARCHAR(30), 
 stock3 VARCHAR(30), 
-stock4 VARCHAR(30), 
-date DATE)"; 
+stock4 VARCHAR(30)"; 
 $conn->query($sql); 
 
 echo "<h3>Таблица создана!</h3>"; 
