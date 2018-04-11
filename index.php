@@ -46,6 +46,28 @@ $_SESSION['tel'] = $row["tel"];
 } 
 } 
 } 
+	$stock1 = $_POST['stock1']; 
+	$stock2 = $_POST['stock2'];
+	$stock3 = $_POST['stock3'];
+	$stock4 = $_POST['stock4'];
+	$balance = $_POST['balance'];
+	$phone = $_POST['buy'];
+	
+	$balance = 40000;
+	$totalst = 0; 
+	$totalst = ($stock1 * 288) + ($stock2 * 155) + ($stock3 * 201) + ($stock4 * 155);
+	$x = ($stock1 * 288) + ($stock2 * 155) + ($stock3 * 201) + ($stock4 * 155) - $balance;
+	    if( isset( $_POST['balance'] ) )
+    {
+       
+        echo "Ваш баланс: $balance";
+ }
+	    if( isset( $_POST['buy'] ) )
+    {
+	echo "Сумма сделки составила: $totalst ";
+       
+        echo "Ваш баланс: $x";
+ }
 
 	    
 	
