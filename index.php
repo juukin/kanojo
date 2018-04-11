@@ -24,6 +24,16 @@
 </form>
 	</form>
 	<?php
+	    try { 
+	$conn = new PDO("sqlsrv:server = tcp:juuksqlserver.database.windows.net,1433; Database = juuksqlbase", "juuksqlserver", "200487pP"); 
+	$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
+	} 
+	catch (PDOException $e) { 
+	print("Error connecting to SQL Server."); 
+	die(print_r($e)); 
+	} 
+	if(!empty($_POST)) { 
+	try { 
 	
 	$stock1 = $_POST['stock1']; 
 	$stock2 = $_POST['stock2'];
@@ -47,6 +57,7 @@
        
         echo "Ваш баланс: $x";
  }
+	    
 	
 		     
 	?>
