@@ -27,7 +27,9 @@
 <input type = "text" name = "Otvet" id = "Otvet"><br> 
 </form> 
 
-<centre><input type = "button" value = "Зарегестрироваться"></centre><br> 
+<form>
+<input type="button" value="Зарегестрироваться" onClick='location.href="index.php"'>
+</form> 
 
 </body> 
 
