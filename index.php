@@ -34,7 +34,7 @@ print("Error connecting to SQL Server.");
 die(print_r($e)); 
 } 
 $sql_select = "SELECT * FROM stock_tbl"; 
-$stmt = $conn->query($sql_select); 
+
 
 	$stock1 = $_POST['stock1']; 
 	$stock2 = $_POST['stock2'];
