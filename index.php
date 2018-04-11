@@ -42,7 +42,7 @@ if(isset($_POST["submit"])) {
 	$stock3 = $_POST['stock3'];
 	$stock4 = $_POST['stock4'];
 	$balance = $_POST['balance'];
-	$phone = $_POST['buy'];
+	$buy = $_POST['buy'];
 	
 	$balance = 40000;
 	$totalst = 0; 
