@@ -23,40 +23,30 @@
 <input type="button" value="Перейти в личный кабинет" onClick='location.href="1.php"'><br>
 </form>
 	</form>
-	<?php
-	    try { 
+	<?php 
+try { 
 	$conn = new PDO("sqlsrv:server = tcp:juuksqlserver.database.windows.net,1433; Database = juuksqlbase", "juuksqlserver", "200487pP"); 
 	$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
 	} 
-	catch (PDOException $e) { 
-	print("Error connecting to SQL Server."); 
-	die(print_r($e)); 
-	} 
-	if(!empty($_POST)) { 
-	try { 
-	
-	$stock1 = $_POST['stock1']; 
-	$stock2 = $_POST['stock2'];
-	$stock3 = $_POST['stock3'];
-	$stock4 = $_POST['stock4'];
-	$balance = $_POST['balance'];
-	$phone = $_POST['buy'];
-	
-	$balance = 40000;
-	$totalst = 0; 
-	$totalst = ($stock1 * 288) + ($stock2 * 155) + ($stock3 * 201) + ($stock4 * 155);
-	$x = ($stock1 * 288) + ($stock2 * 155) + ($stock3 * 201) + ($stock4 * 155) - $balance;
-	    if( isset( $_POST['balance'] ) )
-    {
-       
-        echo "Ваш баланс: $balance";
- }
-	    if( isset( $_POST['buy'] ) )
-    {
-	echo "Сумма сделки составила: $totalst ";
-       
-        echo "Ваш баланс: $x";
- }
+
+catch (PDOException $e) { 
+print("Error connecting to SQL Server."); 
+die(print_r($e)); 
+} 
+$sql_select = "SELECT * FROM stock_tbl"; 
+$stmt = $conn->query($sql_select); 
+if(isset($_POST["submit"])) { 
+if ($stmt->fetchColumn() > 0) { 
+foreach ($n as $row) { 
+session_start(); 
+$_SESSION['familiya'] = $row["familiya"]; 
+$_SESSION['imya'] = $row["imya"]; 
+$_SESSION['otchestvo'] = $row["otchestvo"]; 
+$_SESSION['tel'] = $row["tel"]; 
+} 
+} 
+} 
+
 	    
 	
 		     
